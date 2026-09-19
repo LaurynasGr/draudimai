@@ -1,15 +1,7 @@
-import { getLocale, getTranslations } from '@scaffold/i18n/server'
-import type { Metadata } from 'next'
-import { pageTitle } from '@/lib/brand'
-import { LifeInsurancePageContent } from './content'
+import { redirect } from 'next/navigation'
+import { INSURERS } from './insurers'
 
-export async function generateMetadata(): Promise<Metadata> {
-    const t = await getTranslations('lifeInsurance')
-    return { title: pageTitle(t('metadataTitle')) }
-}
-
-/** Placeholder: nothing to load yet, so there is no Suspense boundary; add one with the first query (see the home page). */
-export default async function LifeInsurancePage() {
-    const locale = await getLocale()
-    return <LifeInsurancePageContent locale={locale} />
+/** The section has no page of its own: the selected insurer lives in the URL, starting with the first one. */
+export default function LifeInsurancePage() {
+    redirect(`/life-insurance/${INSURERS[0].id}`)
 }

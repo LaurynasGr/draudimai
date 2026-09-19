@@ -1,5 +1,281 @@
 {
-    "metadataTitle": "Life insurance",
+    "insurerMetadataTitle": "{insurer} – life insurance",
     "title": "Life insurance",
-    "description": "Information about life insurance and a comparison of offers will appear here."
+    "description": "What each insurer offers: coverages, payouts, age limits and the main exclusions, based on their publicly available insurance rules.",
+    "retrieved": "Information retrieved on {date} from the insurer documents listed below. “Not offered” means the coverage does not appear in those documents. This is a summary, not the policy terms – read the rules themselves before signing a contract.",
+    "insurers": "Insurers",
+    "overview": "Overview",
+    "coverages": "Coverages",
+    "sources": "Sources",
+    "productPage": "Insurer's page",
+    "status": {
+        "offered": "Offered",
+        "partial": "Partly",
+        "notOffered": "Not offered"
+    },
+    "facts": {
+        "event": "Insured event",
+        "payout": "Payout",
+        "terms": "Age and term",
+        "exclusions": "Main exclusions"
+    },
+    "coverage": {
+        "life": "Life insurance (death from any cause)",
+        "accidentalDeath": "Accidental death",
+        "criticalIllness": "Critical illness insurance",
+        "cancer": "Cancer insurance",
+        "childCriticalIllness": "Children's critical illness insurance",
+        "disability": "Permanent incapacity for work (severe disability) from illness or accident",
+        "accidentDisability": "Disability and severe injuries from an accident",
+        "injuries": "Injuries (fractures, dislocations, wounds)",
+        "dailyAllowance": "Daily allowance (temporary incapacity for work)",
+        "hospitalAllowance": "Hospital allowance (inpatient treatment)",
+        "medicalExpenses": "Medical expenses and additional assistance"
+    },
+    "swedbank": {
+        "name": "Swedbank",
+        "insurer": "Swedbank Life Insurance SE, Lithuanian branch",
+        "overview": "Term life insurance with no savings component; it can be linked to a loan agreement, in which case the sum insured equals the outstanding loan.\nThe additional severe disability cover is included in the contract unless the policy says otherwise; an accident injury cover can be added on top.\nValid around the clock, worldwide.\nPremiums are monthly; the insurer may change the premium unilaterally when the statistical mortality, injury or incapacity risk changes.\nAn optional automatic yearly increase of the sum insured (on the insured person's birthday).\nThe contract can be cancelled within 30 days with a full refund of premiums; a payout decision is made within 30 days of receiving all documents.\nPremiums get no income tax relief; payouts are not taxed.\nThe rules state no entry age limits or contract term – these are set in the contract.",
+        "documents": {
+            "lifeRules": "Rules of Life insurance / Life insurance for loan repayment No. LI2020 (effective 2025-09-25, in Lithuanian)",
+            "disabilityRules": "Rules of the additional severe disability insurance No. DI2020 (effective 2024-01-01, in Lithuanian)",
+            "injuryRules": "Rules of the additional accident injury insurance No. TR2020 (effective 2024-05-23, in Lithuanian)",
+            "precontract": "Life insurance pre-contractual information (in Lithuanian)"
+        },
+        "life": {
+            "product": "Gyvybės draudimas / Gyvybės draudimas paskolos grąžinimui (rules No. LI2020)",
+            "summary": "A lump-sum life insurance payout to the beneficiary when the insured person dies.",
+            "event": "Death of the insured person while the cover is in force – from illness or from an accident.",
+            "payout": "The life sum insured in force on the day of the event.\nIf the contract is linked to a loan – additionally the loan interest for up to 2 months after the event.\nA severe disability payout made earlier reduces the life sum insured.",
+            "terms": "The term and the sum insured are set in the contract; the rules state no age limits.\nA loan-linked contract ends when the loan is repaid.",
+            "exclusions": "Suicide within the first 3 years of the contract.\nDriving a vehicle under the influence of alcohol or other substances.\nFlying activities, piloting an aircraft or flying as a crew member (scheduled passenger flights are covered).\nNuclear accident, weapons of mass destruction, military action (taking part in military exercises is covered).\nIntentional criminal activity."
+        },
+        "accidentalDeath": {
+            "summary": "No separate cover. Accidental death is covered by the general life insurance, with no extra sum paid for it."
+        },
+        "criticalIllness": {
+            "summary": "Swedbank does not offer critical illness insurance – no such cover appears in the rules or in the pre-contractual information."
+        },
+        "cancer": {
+            "summary": "Swedbank does not offer cancer insurance."
+        },
+        "childCriticalIllness": {
+            "summary": "No cover for children – only the policyholder is insured."
+        },
+        "disability": {
+            "product": "Papildomas sunkios negalios draudimas (rules No. DI2020)",
+            "summary": "A payout if illness or an accident leaves the insured person with a participation level of 30 % or less.",
+            "event": "Severe disability: a participation level of 30 % or less established by the competent Lithuanian authority and lasting continuously for 12 months or longer.",
+            "payout": "Equal to the life sum insured on the day of the event unless agreed otherwise; for a loan-linked contract also up to 2 months of loan interest.\nAfter the payout this cover ends and the life sum insured is reduced by the amount paid (when it reaches zero, the life insurance ends too).",
+            "terms": "Valid until the day before the insured person turns 60.\nNo waiting period.\nThe cover runs in 12-month periods and renews automatically; the insurer may change the terms and the premium from the start of each new period.",
+            "exclusions": "Intentional self-harm or attempted suicide.\nDriving under the influence of alcohol or other substances.\nFlying activities (scheduled passenger flights are covered).\nNuclear accident, military action (military exercises are covered).\nIntentional criminal activity."
+        },
+        "accidentDisability": {
+            "summary": "No separate cover. Lasting consequences of an injury are covered only as far as they meet the severe disability definition (participation of 30 % or less); in the injury cover a limb amputation is paid as a bone fracture."
+        },
+        "injuries": {
+            "product": "Papildomas traumų dėl nelaimingų atsitikimų draudimas (rules No. TR2020)",
+            "summary": "Fixed payouts in euros for the injuries listed in the table; the sum insured is the same for everyone – 20 000 EUR per insurance period.",
+            "event": "A sudden, unexpected accident caused by external factors that results in an injury listed in the injury table.\nA doctor must be seen within 48 hours.",
+            "payout": "Fixed amounts, for example: femur fracture – 3 000 EUR, humerus fracture – 2 000 EUR, joint dislocation – 600 EUR, nasal bone fracture – 400 EUR, mild brain injury – 200 EUR.\nAdditionally: 150 EUR per day in hospital and 600 EUR for open surgery or arthroscopy.\nNo more than 20 000 EUR per 12-month period; once the full sum is paid the cover ends.\nIf the insured person dies within 10 days of the event, only the life insurance payout is made.",
+            "terms": "Valid until the day before the insured person turns 70.\nThe cover runs in 12-month periods and renews automatically; it can be dropped at any time while keeping the life insurance.",
+            "exclusions": "Illnesses, degenerative processes, inflammations and infections; intervertebral disc and meniscus damage, hernias, dental injuries, frostbite.\nIntoxication of 2 per mille or more, or under the influence of drugs; driving under the influence.\nProfessional sport and motor vehicle sport (recreational riding is covered).\nClimbing and hiking above 4 500 m, diving deeper than 40 m, flying activities.\nMilitary action, nuclear accident, intentional criminal activity, consequences of treatment or surgery."
+        },
+        "dailyAllowance": {
+            "summary": "No daily allowance – injury payouts do not depend on the length of sick leave or lost income."
+        },
+        "hospitalAllowance": {
+            "product": "Part of the accident injury insurance",
+            "summary": "No separate hospital allowance, but the injury cover pays for a hospital stay after an accident.",
+            "event": "Inpatient treatment (excluding rehabilitation and nursing) within 90 days of an insured accident.",
+            "payout": "150 EUR per day spent in hospital; paid only on top of another injury payout and within the overall 20 000 EUR sum.",
+            "terms": "Same as the injury cover – until the age of 70.",
+            "exclusions": "A hospital stay because of illness is not covered.\nAll exclusions of the injury cover apply."
+        },
+        "medicalExpenses": {
+            "summary": "Medical expenses are not reimbursed – injury payouts do not depend on the treatment costs incurred."
+        }
+    },
+    "seb": {
+        "name": "SEB",
+        "insurer": "SEB Life and Pension Baltic SE",
+        "overview": "Personal insurance is assembled from covers chosen one by one; each has its own rules and its own sum insured stated in the policy.\nAll rules are effective from 2026-02-26 and apply together with SEB's Personal insurance rules. The general terms (premiums, cancellation, payout deadlines) are in that document, which is not among the sources here.\nPeople aged 18–68 can be insured and the covers end at 70; for critical illness and permanent incapacity cover the limits are 18–63 and 65.\nDangerous hobbies, voluntary work in defence organisations, rescue work or firefighting, and professional sport are covered only if included in the contract (this exclusion does not apply to the life cover).\nThe critical illness and incapacity payout can be reduced if the insured person lived outside the EU and EFTA for more than 13 consecutive weeks in the 12 months before the event.",
+        "documents": {
+            "lifeRules": "Life insurance rules (in Lithuanian)",
+            "injuryRules": "Injury insurance rules (in Lithuanian)",
+            "severeInjuryRules": "Severe injury insurance rules (in Lithuanian)",
+            "criticalIllnessRules": "Critical illness insurance rules (in Lithuanian)",
+            "disabilityRules": "Permanent incapacity for work insurance rules (in Lithuanian)",
+            "accidentalDeathRules": "Accidental death insurance rules (in Lithuanian)"
+        },
+        "life": {
+            "product": "Gyvybės draudimas",
+            "summary": "When the insured person dies, the sum insured is paid to the people they chose.",
+            "event": "Death of the insured person while the cover is in force.",
+            "payout": "The sum stated in the policy – to the beneficiaries named in the contract or to the heirs.",
+            "terms": "Aged 18 to 68 at the start of the insurance.\nThe cover ends at the age of 70.",
+            "exclusions": "Suicide within the first 2 years of the cover or of an increase of the sum insured.\nOperating a vehicle, vessel or aircraft above the legal limits for alcohol or other substances.\nRadioactive radiation.\nWar, civil war, rebellion, terrorism, revolution, taking part in mass unrest.\nIntentional unlawful acts; knowingly providing false information."
+        },
+        "accidentalDeath": {
+            "product": "Draudimas nuo mirties dėl nelaimingo atsitikimo",
+            "summary": "An extra sum if death is caused by an accident.",
+            "event": "Death caused by an accident (including heat stroke and poisoning), occurring no later than one year after it.",
+            "payout": "The sum stated in the policy – to the beneficiaries or the heirs.",
+            "terms": "Aged 18 to 68 at the start of the insurance.\nThe cover ends at the age of 70.",
+            "exclusions": "Suicide; illness, disability or mental disorder.\nUse of alcohol, drugs or toxic substances; ignoring a doctor's instructions.\nInfection (except tetanus and rabies); treatment or surgery not performed because of the accident.\nWar, terrorism, mass unrest, radioactive radiation, intentional unlawful acts.\nDangerous hobbies, voluntary defence or rescue work and professional sport not included in the contract."
+        },
+        "criticalIllness": {
+            "product": "Draudimas nuo kritinių ligų",
+            "summary": "A lump sum on the first diagnosis of one of 15 life-threatening illnesses.",
+            "event": "First diagnosis of one of 15 conditions: malignant tumour (cancer), myocardial infarction, stroke, kidney failure, heart and vascular surgery (bypass, aorta, valves), severe bacterial meningitis or encephalitis, benign brain tumour, major organ transplant, multiple sclerosis, Parkinson's disease before 60, advanced dementia before 60, loss of hearing, speech or sight due to illness, loss of limbs or paralysis due to illness.",
+            "payout": "The full sum stated in the policy – to the insured person.\nThe cover ends after the payout.",
+            "terms": "Aged 18 to 63 at the start; the cover ends at the age of 65.\nWaiting period – 90 days from the start of the cover or from an increase of the sum insured.",
+            "exclusions": "Death within one month of the insured event.\nEarly-stage cancer, transient ischaemic attacks and the other exceptions listed in each illness definition.\nHIV or AIDS; use of alcohol or drugs; self-harm; ignoring a doctor's instructions.\nWar, terrorism, radioactive radiation, intentional unlawful acts.\nDangerous hobbies and professional sport not included in the contract; a long stay outside the EU and EFTA."
+        },
+        "cancer": {
+            "product": "Part of the critical illness insurance",
+            "summary": "No separate cancer insurance – a malignant tumour is one of the 15 critical illnesses.",
+            "event": "A malignant tumour confirmed by histology or cytology.",
+            "payout": "The full critical illness sum insured; there are no partial payouts for early-stage cancer.",
+            "terms": "As for the critical illness cover: aged 18–63 at the start, until 65, a 90-day waiting period.",
+            "exclusions": "Cancer in situ, cervical dysplasia, pre-cancerous and non-invasive conditions.\nEarly-stage melanoma (below T2N0M0) and other skin tumours without metastases.\nPapillary thyroid carcinoma or prostate cancer staged below T2N0M0.\nStage 1 Hodgkin or non-Hodgkin lymphoma; leukaemia that has not caused anaemia."
+        },
+        "childCriticalIllness": {
+            "summary": "No cover for children – all SEB covers are for people aged 18 and over."
+        },
+        "disability": {
+            "product": "Draudimas nuo nuolatinio nedarbingumo",
+            "summary": "A payout if illness or an accident leaves the insured person permanently unable to work.",
+            "event": "Permanent loss of capacity for work: a participation level of no more than 30 %, officially established by the competent Lithuanian authority for a continuous period of at least 12 months.",
+            "payout": "The sum stated in the policy – to the insured person.\nThe cover ends after the payout.",
+            "terms": "Aged 18 to 63 at the start; the cover ends at the age of 65.\nWaiting period – 90 days (not applied in the case of an accident).",
+            "exclusions": "Self-harm or attempted suicide; ignoring a doctor's instructions.\nUse of alcohol, drugs or toxic substances; driving under the influence.\nWar, terrorism, mass unrest, radioactive radiation, intentional unlawful acts.\nDangerous hobbies, voluntary defence or rescue work and professional sport not included in the contract.\nLiving outside the EU and EFTA for more than 13 consecutive weeks."
+        },
+        "accidentDisability": {
+            "product": "Draudimas nuo sunkių traumų",
+            "summary": "A payout for incurable lasting consequences of an accident – as a percentage of the sum insured.",
+            "event": "A lasting functional impairment or the loss of a body part or sense organ caused by an accident and lasting longer than one year.",
+            "payout": "A percentage of the sum insured according to the table, for example: quadriplegia or coma – 100 %, loss of an arm above the elbow or a leg above the knee – 70 %, loss of sight in one eye – 50 %, loss of the spleen – 10 %.\nA partial loss of function is assessed proportionally; a payout below 1 % is not made.\nAn impairment not listed in the table is covered if participation dropped by more than 25 %.\nInjuries to several body parts add up to at most 100 % of the sum insured.",
+            "terms": "Aged 18 to 68 at the start of the insurance.\nThe cover ends at the age of 70 or once 100 % of the sum insured has been paid.",
+            "exclusions": "Illness, disability, mental disorder; chronic, inflammatory and age-related conditions (hernias, arthritis, tendinitis and others).\nSelf-harm; use of alcohol or drugs; driving under the influence.\nInfection (except tetanus and rabies); treatment or surgery not performed because of the accident.\nWar, terrorism, radioactive radiation, intentional unlawful acts.\nDangerous hobbies, voluntary defence or rescue work and professional sport not included in the contract."
+        },
+        "injuries": {
+            "product": "Draudimas nuo traumų",
+            "summary": "A payout for fractures, dislocations, tears and other injuries – as a percentage of the chosen sum insured.",
+            "event": "A physical injury caused by an accident (including heat stroke and poisoning) while the cover is in force.",
+            "payout": "A percentage of the sum insured according to the injury table, for example: femur fracture or brain concussion – 15 %, humerus fracture – 10 %, knee meniscus tear – 2 %, nasal bone fracture – 2 %, stitched wounds and second-degree burns – 1.5 %.\nAn additional 3 % for a hospital stay of at least 3 bed-days and for each surgery within one year.\nAn injury not listed in the table that needs at least 10 days of treatment – 0.4 % (once per insurance year).\nNo more than 100 % of the sum insured per insurance year.",
+            "terms": "Aged 18 to 68 at the start of the insurance.\nThe cover ends at the age of 70.",
+            "exclusions": "Illness, disability, mental disorder; recurring dislocations; chronic and inflammatory conditions (hernias, arthritis, tendinitis, bursitis and others).\nSelf-harm; use of alcohol or drugs; driving under the influence.\nInfection (except tetanus and rabies); treatment or surgery not performed because of the accident.\nWar, terrorism, radioactive radiation, intentional unlawful acts.\nDangerous hobbies, voluntary defence or rescue work and professional sport not included in the contract."
+        },
+        "dailyAllowance": {
+            "summary": "SEB does not offer a daily allowance for days of temporary incapacity for work."
+        },
+        "hospitalAllowance": {
+            "product": "Part of the injury insurance",
+            "summary": "No separate hospital allowance, but the injury insurance pays a supplement for a hospital stay.",
+            "event": "A hospital stay of at least 3 consecutive bed-days because of an insured injury.",
+            "payout": "A one-off supplement of 3 % of the injury sum insured; nothing is paid per day.",
+            "terms": "As for the injury insurance: aged 18–68 at the start, until 70.",
+            "exclusions": "A hospital stay because of illness is not covered.\nAll exclusions of the injury insurance apply."
+        },
+        "medicalExpenses": {
+            "summary": "SEB does not offer reimbursement of medical expenses."
+        }
+    },
+    "ergo": {
+        "name": "ERGO",
+        "insurer": "ERGO Life Insurance SE",
+        "overview": "Term life insurance with no savings component under general rules No. 028; one contract can insure several people (a family), and the policyholder can be a company.\nThe covers are chosen one by one: life, cancer, critical illness for adults and for children, accidents, total loss of capacity for work.\nAge at the start of the insurance: 0–74 for life cover, 0–69 for accident cover, 18–64 for adult critical illness, 2–17 for children, 18–64 for loss of capacity for work.\nMinimum life sum insured – 3 000 EUR; for cancer, critical illness and loss of capacity for work – 10 000 EUR. Minimum term – 5 years (1 year for group insurance).\nPremiums are yearly, half-yearly, quarterly or monthly; the cover starts only once the first premium is received. If a debt is not settled within 30 days of a notice, the cover can be suspended, and after 6 months of suspension the contract can be terminated.\nThe contract can be cancelled within 30 days with a full refund; payouts are made within 30 days of receiving all the information.\nPremiums get no income tax relief; payouts are not taxed.\nThe accident cover is valid around the clock, worldwide.\nA price list for additional contract administration services applies.",
+        "documents": {
+            "rules": "General life insurance rules No. 028 with the special conditions, price list and pre-contractual information (edition of 2026-06-19, in Lithuanian)"
+        },
+        "life": {
+            "product": "Gyvybės draudimas (special conditions No. 028-02)",
+            "summary": "When the insured person dies, the life sum insured is paid to the beneficiaries or heirs.",
+            "event": "Death of the insured person while the cover is in force; also a court decision declaring the insured person dead.",
+            "payout": "The sum insured in force at the time of death (it can be a changing sum).\nIf no beneficiary is named, the payout goes to the heirs.",
+            "terms": "Aged 0 to 74 at the start of the insurance.\nMinimum sum insured – 3 000 EUR, minimum term – 5 years.",
+            "exclusions": "Suicide within the first 3 years of the cover.\nMilitary action, a state of war or emergency, internal unrest.\nEffects of nuclear energy.\nCriminal acts of the insured person (stated in the pre-contractual information)."
+        },
+        "accidentalDeath": {
+            "product": "Mirtis dėl nelaimingo atsitikimo (special conditions No. 028-03)",
+            "summary": "An extra sum if the insured person dies because of an accident.",
+            "event": "Death from injuries sustained in an accident within one year of it; also a court decision declaring the person dead when they are presumed to have died in an insured event.",
+            "payout": "The accidental death sum stated in the policy.\nDisability and injury payouts already made for the same event are deducted from it.",
+            "terms": "Aged 0 to 69 at the start of the insurance.\nValid around the clock, worldwide.",
+            "exclusions": "Suicide; death from illness.\nActs incurring criminal or administrative liability; taking part in a fight.\nModerate or severe intoxication, poisoning by alcohol, narcotic or psychotropic substances.\nActs of war, military missions, riots, nuclear energy and radiation.\nProfessional and extreme sport or leisure unless agreed otherwise (does not apply to insured persons under 18)."
+        },
+        "criticalIllness": {
+            "product": "Suaugusių asmenų draudimas nuo vėžio ir kitų kritinių ligų (special conditions No. 028-04)",
+            "summary": "Three variants to choose from: A – cancer only, B – 4 critical illnesses, C – 39 critical illnesses.",
+            "event": "First diagnosis, while the cover is in force, of an illness or surgery on the chosen list.\nVariant B: cancer, myocardial infarction, stroke, multiple sclerosis.\nVariant C additionally includes bypass, valve and aorta surgery, kidney and liver failure, paralysis, blindness, deafness, loss of speech, Parkinson's disease, coma, benign brain tumour, severe head injury, loss of limbs, third-degree burns, bacterial meningitis and other illnesses.",
+            "payout": "The full critical illness sum insured – to the insured person; the cover ends once it is paid.\nFor cancer, partial payouts (10 % or 20 % of the sum) are also possible and are not deducted from a later 100 % payout.",
+            "terms": "Aged 18 to 64 at the start; the cover lasts until the age of 70 at most.\nWaiting period – 3 months (6 months for cancer); it does not apply to consequences of an accident – blindness, paralysis, loss of limbs, deafness, coma, severe head injury.\nMinimum sum insured – 10 000 EUR.",
+            "exclusions": "Death from the critical illness within 30 days of the diagnosis (does not apply to cancer).\nHIV or AIDS.\nEffects of alcohol, narcotic or psychotropic substances; intentional self-harm.\nActs of war, peacekeeping missions, nuclear energy and radioactive radiation; criminal acts.\nProfessional and extreme sport or leisure unless the insurer accepted this risk in the contract."
+        },
+        "cancer": {
+            "product": "Draudimas nuo vėžio (special conditions No. 028-01)",
+            "summary": "A separate cancer cover with partial payouts for early-stage cancer; the insured person's minor children are covered automatically.",
+            "event": "Cancer confirmed by histology and diagnosed by an oncologist, haematologist or pathologist: invasive, invasive skin or non-invasive (early-stage).",
+            "payout": "Invasive cancer – 100 % of the sum insured (the cover ends after the payout).\nNon-invasive or early-stage cancer (carcinoma in situ, melanoma in situ, early prostate or thyroid cancer) – 20 %.\nInvasive skin cancer – 10 %.\nEach partial payout is made once.\nThe sum insured of a co-insured minor child is half of the adult's sum, but no more than 25 000 EUR.",
+            "terms": "Aged 18 to 64 at the start; the cover lasts until the age of 70 at most, for children until 18.\nWaiting period – 6 months (3 months for employee group insurance); if cancer is diagnosed during it, the premiums are refunded and the cover ends.\nMinimum sum insured – 10 000 EUR.",
+            "exclusions": "Tumours diagnosed before the contract and the listed pre-cancerous conditions (changed moles, colon polyposis, Crohn's disease, ulcerative colitis, hepatitis, liver cirrhosis and others), unless the insurer was informed about them.\nA diagnosis based only on tumour markers in body fluids.\nHIV or AIDS.\nEffects of alcohol, narcotic or psychotropic substances.\nActs of war, nuclear energy, radioactive radiation."
+        },
+        "childCriticalIllness": {
+            "product": "Vaikų draudimas nuo vėžio ir kitų kritinių ligų (special conditions No. 028-05)",
+            "summary": "A separate cover for children against a list of 14 critical illnesses.",
+            "event": "First diagnosis of one of 14 conditions, among them: cancer, organ or bone marrow transplant, chronic kidney failure, paralysis of limbs, blindness, coma, acute viral encephalitis, severe head injury, loss of limbs, bacterial meningitis, type 1 diabetes.",
+            "payout": "The full critical illness sum insured; the cover ends once it is paid.\nFor cancer, partial payouts too: 20 % for non-invasive or early-stage cancer, 10 % for invasive skin cancer.",
+            "terms": "Aged 2 to 17 at the start; the cover lasts until the age of 18 at most.\nWaiting period – 3 months.",
+            "exclusions": "Death from the critical illness within 30 days of the diagnosis (does not apply to cancer).\nTumours diagnosed before the contract and the listed pre-cancerous conditions.\nHIV or AIDS; acts of war, radioactive radiation and the other exclusions of the adult cover."
+        },
+        "disability": {
+            "product": "Visiško darbingumo netekimo draudimas (special conditions No. 028-06)",
+            "summary": "A payout on an irreversible loss of capacity for work due to illness or an accident.",
+            "event": "An irreversible loss of capacity for work, where a capacity level of 0–25 % is established and the incapacity lasts continuously for at least 12 months.",
+            "payout": "The sum insured in force on the day of the event – to the insured person.\nThe cover ends after the payout.",
+            "terms": "Aged 18 to 64 at the start; the cover lasts until the age of 65 at most.\nWaiting period – 6 months (3 months for employee group insurance); not applied in the case of an accident.\nMinimum sum insured – 10 000 EUR.",
+            "exclusions": "Acts of war, peacekeeping missions, combat duties, nuclear energy and radioactive radiation.\nEffects of alcohol, narcotic or psychotropic substances.\nCriminal acts; intentional self-harm or attempted suicide.\nProfessional and extreme sport or leisure unless the insurer accepted this risk in the contract.\nHIV or AIDS."
+        },
+        "accidentDisability": {
+            "product": "Negalia dėl nelaimingo atsitikimo (special conditions No. 028-03, table No. 1)",
+            "summary": "A payout for long-term or permanent consequences of an accident – as a percentage of the disability sum insured.",
+            "event": "Injuries sustained in an accident that cause a long-term or permanent loss of some functions; also lasting effects of tick-borne encephalitis or Lyme disease.",
+            "payout": "A share of the disability sum insured according to table No. 1, for example: paralysis of all limbs or irreversible coma – 100 %, paralysis of the lower limbs with pelvic organ dysfunction – 70 %, paralysis of one side of the body – 50 %.\nThe payout is increased by 15 % when the dominant arm is injured.\nPayouts for one event within an insurance year – no more than 100 % of the sum.\nDisability is normally assessed no sooner than 9 months after the event; the certificate must be issued within 18 months (24 for tick-borne diseases).",
+            "terms": "Aged 0 to 69 at the start of the insurance.\nValid around the clock, worldwide.",
+            "exclusions": "Intentional self-harm or attempted suicide.\nActs incurring criminal or administrative liability.\nModerate or severe intoxication, narcotic or psychotropic substances; illnesses that cause seizures.\nActs of war, riots, nuclear energy and radiation; consequences of treatment not required by the accident.\nProfessional and extreme sport or leisure unless agreed otherwise (does not apply under 18)."
+        },
+        "injuries": {
+            "product": "Traumos dėl nelaimingo atsitikimo (special conditions No. 028-03, table No. 2)",
+            "summary": "A payout for fractures, dislocations, soft tissue injuries, burns and poisoning – as a percentage of the injury sum insured.",
+            "event": "A bone fracture, dislocation or subluxation, soft tissue injury or accidental acute poisoning sustained in an accident; the table also includes insect stings, tick-borne encephalitis and Lyme disease, and loss of pregnancy.",
+            "payout": "A percentage of the injury sum insured according to table No. 2, for example: fracture of the femoral head or neck – 14 %, humerus fracture – 9 %, Achilles tendon rupture – 5 %, nasal bone fracture – 3 %, ligament sprain – 1 %.\nIncreased by 50 % after osteosynthesis surgery or for facial wounds; by 100 % if an artificial joint is implanted or the injured person is pregnant.\nReduced by 50 % for repeated fractures, dislocations and partial tears.\nPayouts for one event – no more than 100 % of the sum.",
+            "terms": "Aged 0 to 69 at the start of the insurance.\nValid around the clock, worldwide.",
+            "exclusions": "Attempted suicide, self-harm; taking part in a fight; criminal or administrative offences.\nPathological fractures, intervertebral disc damage and hernias; dental damage while eating.\nDislocations where the first dislocation happened before the cover started; fractures of osteosynthesis hardware and prostheses.\nModerate or severe intoxication, narcotic substances; acts of war, radiation.\nProfessional and extreme sport or leisure unless agreed otherwise (does not apply under 18)."
+        },
+        "dailyAllowance": {
+            "product": "Dienpinigiai (special conditions No. 028-03)",
+            "summary": "A chosen amount for every day of temporary incapacity for work after an accident.",
+            "event": "Temporary incapacity for work caused by an accident recognised as an insured event, confirmed by a sick leave certificate; also when a parent nurses an injured insured child.",
+            "payout": "The daily amount stated in the policy, paid from the first day of incapacity.\nFor no more than 30 days per event and 100 days per insurance year.\nFor injuries not listed in the injury table – for no more than 14 days.",
+            "terms": "Aged 0 to 69 at the start, as for the other accident risks.",
+            "exclusions": "Incapacity not confirmed by a properly issued sick leave certificate.\nThe general exclusions of the accident insurance apply."
+        },
+        "hospitalAllowance": {
+            "product": "Ligonpinigiai (special conditions No. 028-03)",
+            "summary": "A chosen amount for every day of inpatient treatment.",
+            "event": "Inpatient treatment because of an insured event under the disability, injury or additional assistance tables; also when a parent stays in hospital nursing an injured insured child.",
+            "payout": "The daily amount stated in the policy, paid from the first day in hospital.\nFor no more than 30 days per event and 100 days per insurance year.",
+            "terms": "Aged 0 to 69 at the start, as for the other accident risks.",
+            "exclusions": "Inpatient treatment for reasons not listed in the payout tables.\nThe general exclusions of the accident insurance apply."
+        },
+        "medicalExpenses": {
+            "product": "Įprastinė medicininė pagalba, papildoma pagalba ir papildomos išlaidos (special conditions No. 028-03, table No. 3)",
+            "summary": "Costs incurred after an accident are reimbursed against invoices, and fixed payouts are made for certain acute illnesses.",
+            "event": "Costs incurred because of an insured accident within 5 years of it; also an acute illness listed in table No. 3.\nThe regular medical assistance applies if the person is insured for the death, disability and injury risks.",
+            "payout": "Regular medical assistance: up to 1 500 EUR for cosmetic plastic surgery, up to 1 000 EUR for rehabilitation and prosthetics, up to 1 000 EUR for psychological help (the last two with a disability of at least 15 %).\nAdditional assistance: search and rescue – up to 10 000 EUR, home adaptation and funeral – up to 600 EUR, psychologist – up to 300 EUR, transport, orthopaedic aids and diagnostic tests – up to 200 EUR per year.\nAcute illnesses (appendicitis, sepsis, tick-borne encephalitis, type 1 diabetes and others) – 500 EUR per event, no more than 1 000 EUR per year.\nAdditional expenses – within the sum agreed in the contract.",
+            "terms": "Aged 0 to 69 at the start of the insurance.\nA 30-day waiting period applies to some of the acute illnesses.\nThe insurer's approval is needed before using the regular medical assistance.",
+            "exclusions": "Costs not supported by invoices or purchase documents.\nDoctor's consultations (only tests are paid for).\nCosts above those actually incurred when several contracts are in force.\nThe general exclusions of the accident insurance apply."
+        }
+    }
 }

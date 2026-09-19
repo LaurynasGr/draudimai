@@ -1,5 +1,281 @@
 {
-    "metadataTitle": "Gyvybės draudimas",
+    "insurerMetadataTitle": "{insurer} – gyvybės draudimas",
     "title": "Gyvybės draudimas",
-    "description": "Čia atsiras informacija apie gyvybės draudimą ir pasiūlymų palyginimas."
+    "description": "Ką siūlo skirtingi draudikai: apsaugos, išmokos, amžiaus ribos ir pagrindinės išimtys – pagal viešai skelbiamas draudimo taisykles.",
+    "retrieved": "Informacija surinkta {date} iš žemiau nurodytų draudikų dokumentų. „Nesiūlo“ reiškia, kad tokios apsaugos šiuose dokumentuose nėra. Tai santrauka, o ne draudimo sąlygos – prieš sudarydami sutartį perskaitykite pačias taisykles.",
+    "insurers": "Draudikai",
+    "overview": "Apžvalga",
+    "coverages": "Apsaugos",
+    "sources": "Šaltiniai",
+    "productPage": "Draudiko puslapis",
+    "status": {
+        "offered": "Siūlo",
+        "partial": "Iš dalies",
+        "notOffered": "Nesiūlo"
+    },
+    "facts": {
+        "event": "Draudžiamasis įvykis",
+        "payout": "Išmoka",
+        "terms": "Amžius ir terminai",
+        "exclusions": "Pagrindinės išimtys"
+    },
+    "coverage": {
+        "life": "Gyvybės draudimas (mirtis dėl bet kokios priežasties)",
+        "accidentalDeath": "Mirtis dėl nelaimingo atsitikimo",
+        "criticalIllness": "Kritinių ligų draudimas",
+        "cancer": "Draudimas nuo vėžio",
+        "childCriticalIllness": "Vaikų kritinių ligų draudimas",
+        "disability": "Nuolatinis nedarbingumas (sunki negalia) dėl ligos ar nelaimingo atsitikimo",
+        "accidentDisability": "Negalia ir sunkios traumos dėl nelaimingo atsitikimo",
+        "injuries": "Traumos (lūžiai, išnirimai, žaizdos)",
+        "dailyAllowance": "Dienpinigiai (laikinas nedarbingumas)",
+        "hospitalAllowance": "Ligonpinigiai (gydymas ligoninėje)",
+        "medicalExpenses": "Medicininės išlaidos ir papildoma pagalba"
+    },
+    "swedbank": {
+        "name": "Swedbank",
+        "insurer": "„Swedbank Life Insurance SE“ Lietuvos filialas",
+        "overview": "Rizikinis gyvybės draudimas be kaupimo; gali būti susietas su kredito sutartimi – tuomet draudimo suma lygi kredito likučiui.\nPapildomas sunkios negalios draudimas įtraukiamas į sutartį, nebent draudimo liudijime nurodyta kitaip; papildomai galima pridėti traumų draudimą.\nGalioja visą parą visame pasaulyje.\nĮmokos mėnesinės; draudikas gali vienašališkai keisti įmoką pasikeitus statistinei mirtingumo, traumų ar darbingumo netekimo rizikai.\nGalimas automatinis kasmetinis draudimo sumos didinimas (apdraustojo gimimo dieną).\nSutarties galima atsisakyti per 30 dienų ir atgauti visas įmokas; sprendimas dėl išmokos priimamas per 30 dienų nuo visų dokumentų gavimo.\nGPM lengvata įmokoms netaikoma, išmokos neapmokestinamos.\nStojimo amžiaus ribos ir sutarties terminas taisyklėse nenurodyti – jie nustatomi sutartyje.",
+        "documents": {
+            "lifeRules": "Gyvybės draudimo / Gyvybės draudimo paskolos grąžinimui taisyklės Nr. LI2020 (galioja nuo 2025-09-25)",
+            "disabilityRules": "Papildomo sunkios negalios draudimo taisyklės Nr. DI2020 (galioja nuo 2024-01-01)",
+            "injuryRules": "Papildomo traumų dėl nelaimingų atsitikimų draudimo taisyklės Nr. TR2020 (galioja nuo 2024-05-23)",
+            "precontract": "Gyvybės draudimo ikisutartinė informacija"
+        },
+        "life": {
+            "product": "Gyvybės draudimas / Gyvybės draudimas paskolos grąžinimui (taisyklės Nr. LI2020)",
+            "summary": "Apdraustajam mirus naudos gavėjui išmokama vienkartinė gyvybės draudimo suma.",
+            "event": "Apdraustojo mirtis draudimo apsaugos galiojimo laikotarpiu – tiek dėl ligos, tiek dėl nelaimingo atsitikimo.",
+            "payout": "Gyvybės draudimo suma, galiojusi įvykio dieną.\nJei sutartis susieta su kreditu – papildomai kredito palūkanos už ne ilgesnį kaip 2 mėnesių laikotarpį po įvykio.\nAnksčiau išmokėta sunkios negalios išmoka mažina gyvybės draudimo sumą.",
+            "terms": "Terminas ir draudimo suma nustatomi sutartyje; amžiaus ribos taisyklėse nenurodytos.\nSu kreditu susieta sutartis baigiasi grąžinus kreditą.",
+            "exclusions": "Savižudybė per pirmuosius 3 sutarties metus.\nTransporto priemonės vairavimas apsvaigus nuo alkoholio ar kitų medžiagų.\nSkraidymo veikla, orlaivio pilotavimas ar skrydis ekipažo nariu (reguliarūs keleiviniai skrydžiai apdrausti).\nBranduolinė avarija, masinio naikinimo ginklai, kariniai veiksmai (dalyvavimas karinėse pratybose apdraustas).\nTyčinė nusikalstama veikla."
+        },
+        "accidentalDeath": {
+            "summary": "Atskiros apsaugos nėra. Mirtis dėl nelaimingo atsitikimo apdrausta bendruoju gyvybės draudimu, papildoma suma už ją nemokama."
+        },
+        "criticalIllness": {
+            "summary": "Kritinių ligų draudimo Swedbank nesiūlo – tokios apsaugos nėra nei taisyklėse, nei ikisutartinėje informacijoje."
+        },
+        "cancer": {
+            "summary": "Draudimo nuo vėžio Swedbank nesiūlo."
+        },
+        "childCriticalIllness": {
+            "summary": "Vaikų draudimo nėra – draudžiamas tik pats draudėjas."
+        },
+        "disability": {
+            "product": "Papildomas sunkios negalios draudimas (taisyklės Nr. DI2020)",
+            "summary": "Išmoka, jei dėl ligos ar nelaimingo atsitikimo apdraustajam nustatomas 30 % ar mažesnis dalyvumo lygis.",
+            "event": "Sunki negalia: atitinkamos Lietuvos institucijos nustatytas 30 % ar mažesnis dalyvumo lygis, besitęsiantis nepertraukiamai 12 mėnesių ar ilgiau.",
+            "payout": "Lygi gyvybės draudimo sumai įvykio dieną, jei nesutarta kitaip; su kreditu susietai sutarčiai – dar ir iki 2 mėnesių kredito palūkanų.\nIšmokėjus ši apsauga baigiasi, o gyvybės draudimo suma sumažinama išmokos dydžiu (jai tapus lygiai nuliui, baigiasi ir gyvybės draudimas).",
+            "terms": "Galioja iki dienos prieš sukankant 60 metų.\nLaukimo laikotarpis nenumatytas.\nApsauga galioja 12 mėnesių laikotarpiais ir pratęsiama automatiškai; sąlygas ir įmoką draudikas gali keisti nuo kiekvieno naujo laikotarpio pradžios.",
+            "exclusions": "Tyčinis susižalojimas ar bandymas nusižudyti.\nVairavimas apsvaigus nuo alkoholio ar kitų medžiagų.\nSkraidymo veikla (reguliarūs keleiviniai skrydžiai apdrausti).\nBranduolinė avarija, kariniai veiksmai (karinės pratybos apdraustos).\nTyčinė nusikalstama veikla."
+        },
+        "accidentDisability": {
+            "summary": "Atskiros apsaugos nėra. Liekamieji traumų padariniai apdrausti tik tiek, kiek atitinka sunkios negalios apibrėžimą (dalyvumas 30 % ar mažiau); galūnės amputacija traumų draudime vertinama kaip kaulo lūžis."
+        },
+        "injuries": {
+            "product": "Papildomas traumų dėl nelaimingų atsitikimų draudimas (taisyklės Nr. TR2020)",
+            "summary": "Fiksuotos išmokos eurais už lentelėje išvardytas traumas; draudimo suma visiems – 20 000 EUR per draudimo laikotarpį.",
+            "event": "Staigus, netikėtas nelaimingas atsitikimas, sukeltas išorinių veiksnių, dėl kurio patirta traumų lentelėje nurodyta trauma.\nĮ gydytoją būtina kreiptis per 48 valandas.",
+            "payout": "Fiksuotos sumos, pavyzdžiui: šlaunikaulio lūžis – 3 000 EUR, žastikaulio lūžis – 2 000 EUR, sąnario išnirimas – 600 EUR, nosikaulio lūžis – 400 EUR, lengva smegenų trauma – 200 EUR.\nPapildomai: 150 EUR už hospitalizacijos parą ir 600 EUR už atvirą chirurginį gydymą ar artroskopiją.\nPer 12 mėnesių laikotarpį – ne daugiau kaip 20 000 EUR; išmokėjus visą sumą apsauga baigiasi.\nApdraustajam mirus per 10 dienų nuo įvykio mokama tik gyvybės draudimo išmoka.",
+            "terms": "Galioja iki dienos prieš sukankant 70 metų.\nApsauga galioja 12 mėnesių laikotarpiais ir pratęsiama automatiškai; jos galima bet kada atsisakyti paliekant gyvybės draudimą.",
+            "exclusions": "Ligos, degeneraciniai procesai, uždegimai ir infekcijos; tarpslankstelinių diskų ir meniskų pažeidimai, išvaržos, dantų sužalojimai, nušalimai.\n2 promilių ir didesnis girtumas ar apsvaigimas; vairavimas apsvaigus.\nProfesionalus sportas ir motorizuotų transporto priemonių sportas (pramoginis važinėjimas apdraustas).\nKopimas ir žygiai aukščiau nei 4 500 m, nardymas giliau nei 40 m, skraidymo veikla.\nKariniai veiksmai, branduolinė avarija, tyčinė nusikalstama veikla, gydymo ar operacijų pasekmės."
+        },
+        "dailyAllowance": {
+            "summary": "Dienpinigių nėra – traumų išmokos nepriklauso nuo nedarbingumo trukmės ar prarastų pajamų."
+        },
+        "hospitalAllowance": {
+            "product": "Traumų dėl nelaimingų atsitikimų draudimo dalis",
+            "summary": "Atskiro ligonpinigių draudimo nėra, tačiau traumų draudimas moka už hospitalizaciją po nelaimingo atsitikimo.",
+            "event": "Gydymas stacionare (išskyrus reabilitaciją ir slaugą) per 90 dienų nuo draudžiamojo nelaimingo atsitikimo.",
+            "payout": "150 EUR už stacionare praleistą parą; mokama tik papildomai prie kitos traumų išmokos ir neviršijant bendros 20 000 EUR sumos.",
+            "terms": "Tokie patys kaip traumų draudimo – iki 70 metų.",
+            "exclusions": "Hospitalizacija dėl ligos neapdrausta.\nTaikomos visos traumų draudimo išimtys."
+        },
+        "medicalExpenses": {
+            "summary": "Medicininės išlaidos nekompensuojamos – traumų išmokos nepriklauso nuo patirtų gydymo išlaidų."
+        }
+    },
+    "seb": {
+        "name": "SEB",
+        "insurer": "SEB Life and Pension Baltic SE",
+        "overview": "Asmens draudimas sudaromas iš atskirai pasirenkamų apsaugų; kiekvienai taikomos atskiros taisyklės ir draudimo liudijime nurodyta sava draudimo suma.\nVisos taisyklės galioja nuo 2026-02-26 ir taikomos kartu su SEB Asmens draudimo taisyklėmis. Bendrosios sąlygos (įmokos, sutarties nutraukimas, išmokų terminai) yra jose – šio dokumento tarp šaltinių nėra.\nDraudžiami 18–68 metų asmenys, apsaugos baigiasi sulaukus 70 metų; kritinių ligų ir nuolatinio nedarbingumo draudimui – atitinkamai 18–63 ir 65 metai.\nPavojingi pomėgiai, savanoriška veikla gynybos organizacijose, gelbėjimo darbai ar gaisrų gesinimas ir profesionalus sportas apdrausti tik tuomet, jei įtraukti į sutartį (gyvybės draudimui ši išimtis netaikoma).\nKritinių ligų ir nedarbingumo išmoka gali būti sumažinta, jei per 12 mėnesių iki įvykio ilgiau nei 13 savaičių iš eilės gyventa už ES ir ELPA valstybių ribų.",
+        "documents": {
+            "lifeRules": "Gyvybės draudimo taisyklės",
+            "injuryRules": "Draudimo nuo traumų taisyklės",
+            "severeInjuryRules": "Draudimo nuo sunkių traumų taisyklės",
+            "criticalIllnessRules": "Draudimo nuo kritinių ligų taisyklės",
+            "disabilityRules": "Draudimo nuo nuolatinio nedarbingumo taisyklės",
+            "accidentalDeathRules": "Draudimo nuo mirties dėl nelaimingo atsitikimo taisyklės"
+        },
+        "life": {
+            "product": "Gyvybės draudimas",
+            "summary": "Apdraustajam mirus draudimo suma išmokama jo pasirinktiems žmonėms.",
+            "event": "Apdraustojo mirtis draudimo apsaugos galiojimo laikotarpiu.",
+            "payout": "Draudimo liudijime nurodyta suma – sutartyje nurodytiems naudos gavėjams arba paveldėtojams.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 68 metų.\nApsauga baigiasi sulaukus 70 metų.",
+            "exclusions": "Savižudybė per pirmuosius 2 metus nuo apsaugos pradžios arba draudimo sumos padidinimo.\nTransporto priemonės, laivo ar orlaivio valdymas viršijant leistinas alkoholio ar kitų medžiagų ribas.\nRadioaktyvi spinduliuotė.\nKaras, pilietinis karas, maištas, terorizmas, revoliucija, dalyvavimas masiniuose neramumuose.\nTyčiniai neteisėti veiksmai; sąmoningai pateikta neteisinga informacija."
+        },
+        "accidentalDeath": {
+            "product": "Draudimas nuo mirties dėl nelaimingo atsitikimo",
+            "summary": "Papildoma suma, jei mirtis ištinka dėl nelaimingo atsitikimo.",
+            "event": "Mirtis dėl nelaimingo atsitikimo (įskaitant šiluminį smūgį ir apsinuodijimą), ištikusi ne vėliau kaip per vienerius metus nuo jo.",
+            "payout": "Draudimo liudijime nurodyta suma – naudos gavėjams arba paveldėtojams.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 68 metų.\nApsauga baigiasi sulaukus 70 metų.",
+            "exclusions": "Savižudybė; liga, neįgalumas ar psichikos sutrikimas.\nAlkoholio, narkotinių ar toksinių medžiagų vartojimas; gydytojo nurodymų nepaisymas.\nInfekcija (išskyrus stabligę ir pasiutligę); gydymas ar operacija, atlikti ne dėl nelaimingo atsitikimo.\nKaras, terorizmas, masiniai neramumai, radioaktyvi spinduliuotė, tyčiniai neteisėti veiksmai.\nĮ sutartį neįtraukti pavojingi pomėgiai, savanoriška gynybos ar gelbėjimo veikla, profesionalus sportas."
+        },
+        "criticalIllness": {
+            "product": "Draudimas nuo kritinių ligų",
+            "summary": "Vienkartinė išmoka pirmą kartą diagnozavus vieną iš 15 gyvybei pavojingų ligų.",
+            "event": "Pirmą kartą diagnozuota viena iš 15 ligų: piktybinis navikas (vėžys), miokardo infarktas, insultas, inkstų nepakankamumas, širdies ir kraujagyslių operacijos (šuntavimas, aortos, vožtuvų), sunkus bakterinis meningitas ar encefalitas, gerybinis smegenų auglys, pagrindinių organų transplantacija, išsėtinė sklerozė, Parkinsono liga iki 60 metų, pažengusi demencija iki 60 metų, klausos, kalbos ar regos netekimas dėl ligos, galūnių netekimas ar paralyžius dėl ligos.",
+            "payout": "Visa draudimo liudijime nurodyta suma – apdraustajam.\nPo išmokos ši apsauga baigiasi.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 63 metų; apsauga baigiasi sulaukus 65 metų.\nLaukimo laikotarpis – 90 dienų nuo apsaugos pradžios arba draudimo sumos padidinimo.",
+            "exclusions": "Mirtis per vieną mėnesį nuo draudžiamojo įvykio.\nAnkstyvų stadijų vėžys, praeinantys smegenų išemijos priepuoliai ir kitos kiekvienos ligos apibrėžime nurodytos išimtys.\nŽIV arba AIDS; alkoholio ar narkotinių medžiagų vartojimas; savęs žalojimas; gydytojo nurodymų nepaisymas.\nKaras, terorizmas, radioaktyvi spinduliuotė, tyčiniai neteisėti veiksmai.\nĮ sutartį neįtraukti pavojingi pomėgiai ir profesionalus sportas; ilgas gyvenimas už ES ir ELPA ribų."
+        },
+        "cancer": {
+            "product": "Draudimo nuo kritinių ligų dalis",
+            "summary": "Atskiro draudimo nuo vėžio nėra – piktybinis navikas yra viena iš 15 kritinių ligų.",
+            "event": "Histologiškai arba citologiškai patvirtintas piktybinis navikas.",
+            "payout": "Visa kritinių ligų draudimo suma; dalinių išmokų už ankstyvų stadijų vėžį nėra.",
+            "terms": "Kaip kritinių ligų draudimo: 18–63 metai pradžioje, iki 65 metų, 90 dienų laukimo laikotarpis.",
+            "exclusions": "Vėžys in situ, gimdos kaklelio displazija, priešvėžinės ir neinvazinės būklės.\nAnkstyvos stadijos melanoma (žemesnė nei T2N0M0) ir kiti odos navikai be metastazių.\nSkydliaukės papiliarinė karcinoma ar prostatos vėžys, kurių stadija žemesnė nei T2N0M0.\nHodžkino ar ne Hodžkino limfomos 1 stadija; anemijos nesukėlusi leukemija."
+        },
+        "childCriticalIllness": {
+            "summary": "Vaikų draudimo nėra – visos SEB apsaugos skirtos asmenims nuo 18 metų."
+        },
+        "disability": {
+            "product": "Draudimas nuo nuolatinio nedarbingumo",
+            "summary": "Išmoka, jei dėl ligos ar nelaimingo atsitikimo tampama nuolat nedarbingu.",
+            "event": "Nuolatinis darbingumo netekimas: dalyvumo lygis neviršija 30 %, jį oficialiai nustatė kompetentinga Lietuvos institucija ne trumpesniam kaip 12 mėnesių nepertraukiamam laikotarpiui.",
+            "payout": "Draudimo liudijime nurodyta suma – apdraustajam.\nPo išmokos ši apsauga baigiasi.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 63 metų; apsauga baigiasi sulaukus 65 metų.\nLaukimo laikotarpis – 90 dienų (netaikomas nelaimingo atsitikimo atveju).",
+            "exclusions": "Savęs žalojimas ar bandymas nusižudyti; gydytojo nurodymų nepaisymas.\nAlkoholio, narkotinių ar toksinių medžiagų vartojimas; vairavimas apsvaigus.\nKaras, terorizmas, masiniai neramumai, radioaktyvi spinduliuotė, tyčiniai neteisėti veiksmai.\nĮ sutartį neįtraukti pavojingi pomėgiai, savanoriška gynybos ar gelbėjimo veikla, profesionalus sportas.\nIlgiau nei 13 savaičių iš eilės gyventa už ES ir ELPA ribų."
+        },
+        "accidentDisability": {
+            "product": "Draudimas nuo sunkių traumų",
+            "summary": "Išmoka už nepagydomus liekamuosius nelaimingo atsitikimo padarinius – procentais nuo draudimo sumos.",
+            "event": "Liekamasis funkcijos sutrikimas arba kūno dalies ar jutimo organo netekimas dėl nelaimingo atsitikimo, trunkantis ilgiau nei vienerius metus.",
+            "payout": "Procentas nuo draudimo sumos pagal lentelę, pavyzdžiui: kvadriplegija ar koma – 100 %, rankos netekimas virš alkūnės ar kojos virš kelio – 70 %, vienos akies regos netekimas – 50 %, blužnies netekimas – 10 %.\nDalinis funkcijos netekimas vertinamas proporcingai; mažesnė nei 1 % išmoka nemokama.\nLentelėje nenurodytas sutrikimas apdraustas, jei dalyvumas sumažėjo daugiau kaip 25 %.\nKelių kūno dalių sužalojimai sumuojami iki 100 % draudimo sumos.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 68 metų.\nApsauga baigiasi sulaukus 70 metų arba išmokėjus 100 % draudimo sumos.",
+            "exclusions": "Liga, neįgalumas, psichikos sutrikimas; lėtinės, uždegiminės ir su senėjimu susijusios būklės (išvaržos, artritas, tendinitas ir kitos).\nSavęs žalojimas; alkoholio ar narkotinių medžiagų vartojimas; vairavimas apsvaigus.\nInfekcija (išskyrus stabligę ir pasiutligę); gydymas ar operacija, atlikti ne dėl nelaimingo atsitikimo.\nKaras, terorizmas, radioaktyvi spinduliuotė, tyčiniai neteisėti veiksmai.\nĮ sutartį neįtraukti pavojingi pomėgiai, savanoriška gynybos ar gelbėjimo veikla, profesionalus sportas."
+        },
+        "injuries": {
+            "product": "Draudimas nuo traumų",
+            "summary": "Išmoka už lūžius, išnirimus, plyšimus ir kitus sužalojimus – procentais nuo pasirinktos draudimo sumos.",
+            "event": "Fizinis sužalojimas, patirtas dėl nelaimingo atsitikimo (įskaitant šilumos smūgį ir apsinuodijimą) galiojant apsaugai.",
+            "payout": "Procentas nuo draudimo sumos pagal traumų lentelę, pavyzdžiui: šlaunikaulio lūžis ar smegenų sutrenkimas – 15 %, žastikaulio lūžis – 10 %, kelio menisko plyšimas – 2 %, nosikaulių lūžis – 2 %, siūtos žaizdos ir II laipsnio nudegimai – 1,5 %.\nPapildomai po 3 % už ne trumpesnę kaip 3 lovadienių hospitalizaciją ir už kiekvieną operaciją per vienerius metus.\nLentelėje nenurodytas sužalojimas, kuriam reikia bent 10 dienų gydymo, – 0,4 % (kartą per draudimo metus).\nPer draudimo metus – ne daugiau kaip 100 % draudimo sumos.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 68 metų.\nApsauga baigiasi sulaukus 70 metų.",
+            "exclusions": "Liga, negalia, psichikos sutrikimas; pasikartojantys išnirimai; lėtinės ir uždegiminės būklės (išvaržos, artritas, tendinitas, bursitas ir kitos).\nSavęs žalojimas; alkoholio ar narkotinių medžiagų vartojimas; vairavimas apsvaigus.\nInfekcija (išskyrus stabligę ir pasiutligę); gydymas ar operacija, atlikti ne dėl nelaimingo atsitikimo.\nKaras, terorizmas, radioaktyvi spinduliuotė, tyčiniai neteisėti veiksmai.\nĮ sutartį neįtraukti pavojingi pomėgiai, savanoriška gynybos ar gelbėjimo veikla, profesionalus sportas."
+        },
+        "dailyAllowance": {
+            "summary": "Dienpinigių už laikino nedarbingumo dienas SEB nesiūlo."
+        },
+        "hospitalAllowance": {
+            "product": "Draudimo nuo traumų dalis",
+            "summary": "Atskirų ligonpinigių nėra, tačiau draudimas nuo traumų moka priedą už hospitalizaciją.",
+            "event": "Ne trumpesnė kaip 3 lovadienių iš eilės hospitalizacija dėl draudžiamosios traumos.",
+            "payout": "Vienkartinis 3 % draudimo nuo traumų sumos priedas; už dieną nemokama.",
+            "terms": "Kaip draudimo nuo traumų: 18–68 metai pradžioje, iki 70 metų.",
+            "exclusions": "Hospitalizacija dėl ligos neapdrausta.\nTaikomos visos draudimo nuo traumų išimtys."
+        },
+        "medicalExpenses": {
+            "summary": "Medicininių išlaidų kompensavimo SEB nesiūlo."
+        }
+    },
+    "ergo": {
+        "name": "ERGO",
+        "insurer": "ERGO Life Insurance SE",
+        "overview": "Rizikinis gyvybės draudimas be kaupimo pagal bendrąsias taisykles Nr. 028; viena sutartimi galima apdrausti kelis asmenis (šeimą), draudėju gali būti ir įmonė.\nApsaugos pasirenkamos: gyvybė, vėžys, kritinės ligos suaugusiems ir vaikams, nelaimingi atsitikimai, visiškas darbingumo netekimas.\nAmžius draudimo pradžioje: gyvybės draudimui 0–74 metai, nelaimingų atsitikimų – 0–69, kritinių ligų suaugusiems – 18–64, vaikams – 2–17, darbingumo netekimo – 18–64.\nMinimali gyvybės draudimo suma – 3 000 EUR; vėžio, kritinių ligų ir darbingumo netekimo – 10 000 EUR. Minimalus terminas – 5 metai (grupiniam draudimui – 1 metai).\nĮmokos metinės, pusmetinės, ketvirtinės ar mėnesinės; apsauga įsigalioja tik gavus pirmą įmoką. Nepadengus skolos per 30 dienų nuo pranešimo apsauga gali būti sustabdyta, o po 6 mėnesių sustabdymo sutartis – nutraukta.\nSutarties galima atsisakyti per 30 dienų ir atgauti visą įmoką; išmokos mokamos per 30 dienų nuo visos informacijos gavimo.\nGPM lengvata įmokoms netaikoma, išmokos neapmokestinamos.\nNelaimingų atsitikimų draudimas galioja visą parą visame pasaulyje.\nTaikomas papildomų sutarties administravimo paslaugų kainoraštis.",
+        "documents": {
+            "rules": "Bendrosios gyvybės draudimo taisyklės Nr. 028 su specialiosiomis sąlygomis, kainoraščiu ir ikisutartine informacija (redakcija nuo 2026-06-19)"
+        },
+        "life": {
+            "product": "Gyvybės draudimas (specialiosios sąlygos Nr. 028-02)",
+            "summary": "Apdraustajam mirus naudos gavėjams arba įpėdiniams išmokama gyvybės draudimo suma.",
+            "event": "Apdraustojo mirtis draudimo apsaugos galiojimo laikotarpiu; taip pat teismo sprendimas paskelbti apdraustąjį mirusiu.",
+            "payout": "Mirties metu galiojusi draudimo suma (ji gali būti kintanti).\nNenurodžius naudos gavėjo, išmoka mokama įpėdiniams.",
+            "terms": "Draudimo pradžioje – nuo 0 iki 74 metų.\nMinimali draudimo suma – 3 000 EUR, minimalus terminas – 5 metai.",
+            "exclusions": "Savižudybė per pirmuosius 3 apsaugos galiojimo metus.\nKariniai veiksmai, karo ar nepaprastoji padėtis, vidaus neramumai.\nBranduolinės energijos poveikis.\nApdraustojo nusikalstama veika (nurodyta ikisutartinėje informacijoje)."
+        },
+        "accidentalDeath": {
+            "product": "Mirtis dėl nelaimingo atsitikimo (specialiosios sąlygos Nr. 028-03)",
+            "summary": "Papildoma suma, jei apdraustasis miršta dėl nelaimingo atsitikimo.",
+            "event": "Mirtis dėl nelaimingo atsitikimo metu patirtų sužalojimų per vienerius metus nuo jo; taip pat teismo sprendimas paskelbti mirusiu, kai manoma, kad žūta dėl draudžiamojo įvykio.",
+            "payout": "Draudimo liudijime nurodyta mirties dėl nelaimingo atsitikimo suma.\nIš jos atimamos dėl to paties įvykio jau išmokėtos negalios ir traumų išmokos.",
+            "terms": "Draudimo pradžioje – nuo 0 iki 69 metų.\nGalioja visą parą visame pasaulyje.",
+            "exclusions": "Savižudybė; mirtis dėl ligos.\nVeika, užtraukianti baudžiamąją ar administracinę atsakomybę; dalyvavimas muštynėse.\nVidutinis ir sunkus girtumas, apsinuodijimas alkoholiu, narkotinėmis ar psichotropinėmis medžiagomis.\nKaro veiksmai, karinė misija, riaušės, branduolinė energija ir spinduliuotė.\nProfesionalus ir ekstremalus sportas ar laisvalaikis, jei nesutarta kitaip (netaikoma apdraustiesiems iki 18 metų)."
+        },
+        "criticalIllness": {
+            "product": "Suaugusių asmenų draudimas nuo vėžio ir kitų kritinių ligų (specialiosios sąlygos Nr. 028-04)",
+            "summary": "Trys pasirenkami variantai: A – tik vėžys, B – 4 kritinės ligos, C – 39 kritinės ligos.",
+            "event": "Pirmą kartą apsaugos galiojimo metu diagnozuota pasirinkto sąrašo liga ar atlikta operacija.\nB variantas: vėžys, miokardo infarktas, insultas, išsėtinė sklerozė.\nC variantas papildomai apima šuntavimo, vožtuvų ir aortos operacijas, inkstų ir kepenų nepakankamumą, paralyžių, aklumą, kurtumą, kalbos netekimą, Parkinsono ligą, komą, gerybinį smegenų auglį, sunkią galvos traumą, galūnių netekimą, III laipsnio nudegimus, bakterinį meningitą ir kitas ligas.",
+            "payout": "Visa kritinių ligų draudimo suma – apdraustajam; ją išmokėjus apsauga baigiasi.\nVėžio atveju galimos ir dalinės išmokos (10 % arba 20 % sumos), kurios iš vėlesnės 100 % išmokos neatimamos.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 64 metų; apsauga galioja ne ilgiau kaip iki 70 metų.\nLaukimo laikotarpis – 3 mėnesiai (vėžiui – 6 mėnesiai); netaikomas nelaimingo atsitikimo pasekmėms – aklumui, paralyžiui, galūnių netekimui, kurtumui, komai, sunkiai galvos traumai.\nMinimali draudimo suma – 10 000 EUR.",
+            "exclusions": "Mirtis dėl kritinės ligos per 30 dienų nuo diagnozės (netaikoma vėžiui).\nŽIV arba AIDS.\nAlkoholio, narkotinių ar psichotropinių medžiagų poveikis; tyčinis savęs žalojimas.\nKaro veiksmai, taikos palaikymo misijos, branduolinė energija ir radioaktyvi spinduliuotė; nusikalstama veika.\nProfesionalus ir ekstremalus sportas ar laisvalaikis, jei draudikas šios rizikos neprisiėmė sutartyje."
+        },
+        "cancer": {
+            "product": "Draudimas nuo vėžio (specialiosios sąlygos Nr. 028-01)",
+            "summary": "Atskira apsauga nuo vėžio su dalinėmis išmokomis už ankstyvų stadijų vėžį; kartu automatiškai apdraudžiami nepilnamečiai vaikai.",
+            "event": "Histologiškai patvirtintas ir onkologo, hematologo ar patologo diagnozuotas vėžys: invazinis, invazinis odos arba neinvazinis (ankstyvos stadijos).",
+            "payout": "Invazinis vėžys – 100 % draudimo sumos (po išmokos apsauga baigiasi).\nNeinvazinis ar ankstyvų stadijų vėžys (karcinoma in situ, melanoma in situ, ankstyvas prostatos ar skydliaukės vėžys) – 20 %.\nInvazinis odos vėžys – 10 %.\nDalinės išmokos mokamos po vieną kartą.\nKartu apdrausto nepilnamečio vaiko draudimo suma – pusė suaugusiojo sumos, bet ne daugiau kaip 25 000 EUR.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 64 metų; apsauga galioja ne ilgiau kaip iki 70 metų, vaikams – iki 18 metų.\nLaukimo laikotarpis – 6 mėnesiai (darbuotojų grupiniam draudimui – 3 mėnesiai); per jį diagnozavus vėžį grąžinamos įmokos ir apsauga nutrūksta.\nMinimali draudimo suma – 10 000 EUR.",
+            "exclusions": "Iki sutarties diagnozuoti navikai ir išvardytos ikivėžinės būklės (pakitę apgamai, storosios žarnos polipozė, Krono liga, opinis kolitas, hepatitas, kepenų cirozė ir kitos), jei draudikas apie jas nebuvo informuotas.\nDiagnozė, pagrįsta vien vėžio žymenimis organizmo skysčiuose.\nŽIV arba AIDS.\nAlkoholio, narkotinių ar psichotropinių medžiagų poveikis.\nKaro veiksmai, branduolinė energija, radioaktyvi spinduliuotė."
+        },
+        "childCriticalIllness": {
+            "product": "Vaikų draudimas nuo vėžio ir kitų kritinių ligų (specialiosios sąlygos Nr. 028-05)",
+            "summary": "Atskira apsauga vaikams nuo 14 kritinių ligų sąrašo.",
+            "event": "Pirmą kartą diagnozuota viena iš 14 ligų, tarp jų: vėžys, organų ar kaulų čiulpų transplantacija, lėtinis inkstų nepakankamumas, galūnių paralyžius, aklumas, koma, ūmus virusinis encefalitas, sunki galvos trauma, galūnių netekimas, bakterinis meningitas, I tipo cukrinis diabetas.",
+            "payout": "Visa kritinių ligų draudimo suma; ją išmokėjus apsauga baigiasi.\nVėžio atveju – ir dalinės išmokos: 20 % už neinvazinį ar ankstyvų stadijų, 10 % už invazinį odos vėžį.",
+            "terms": "Draudimo pradžioje – nuo 2 iki 17 metų; apsauga galioja ne ilgiau kaip iki 18 metų.\nLaukimo laikotarpis – 3 mėnesiai.",
+            "exclusions": "Mirtis dėl kritinės ligos per 30 dienų nuo diagnozės (netaikoma vėžiui).\nIki sutarties diagnozuoti navikai ir išvardytos ikivėžinės būklės.\nŽIV arba AIDS; karo veiksmai, radioaktyvi spinduliuotė ir kitos suaugusiųjų draudimui taikomos išimtys."
+        },
+        "disability": {
+            "product": "Visiško darbingumo netekimo draudimas (specialiosios sąlygos Nr. 028-06)",
+            "summary": "Išmoka negrįžtamai netekus darbingumo dėl ligos ar nelaimingo atsitikimo.",
+            "event": "Negrįžtamas darbingumo netekimas, kai apdraustajam nustatytas 0–25 % darbingumo lygis ir toks nedarbingumas nenutrūkstamai tęsiasi ne trumpiau kaip 12 mėnesių.",
+            "payout": "Įvykio dieną galiojusi draudimo suma – apdraustajam.\nPo išmokos ši apsauga baigiasi.",
+            "terms": "Draudimo pradžioje – nuo 18 iki 64 metų; apsauga galioja ne ilgiau kaip iki 65 metų.\nLaukimo laikotarpis – 6 mėnesiai (darbuotojų grupiniam draudimui – 3 mėnesiai); netaikomas nelaimingo atsitikimo atveju.\nMinimali draudimo suma – 10 000 EUR.",
+            "exclusions": "Karo veiksmai, taikos palaikymo misijos, kovinės užduotys, branduolinė energija ir radioaktyvi spinduliuotė.\nAlkoholio, narkotinių ar psichotropinių medžiagų poveikis.\nNusikalstama veika; tyčinis savęs žalojimas ar bandymas nusižudyti.\nProfesionalus ir ekstremalus sportas ar laisvalaikis, jei draudikas šios rizikos neprisiėmė sutartyje.\nŽIV arba AIDS."
+        },
+        "accidentDisability": {
+            "product": "Negalia dėl nelaimingo atsitikimo (specialiosios sąlygos Nr. 028-03, lentelė Nr. 1)",
+            "summary": "Išmoka už ilgalaikius ar nuolatinius nelaimingo atsitikimo padarinius – procentais nuo negalios draudimo sumos.",
+            "event": "Nelaimingo atsitikimo metu patirti sužalojimai, dėl kurių ilgam ar visam laikui netenkama dalies funkcijų; taip pat liekamieji reiškiniai persirgus erkiniu encefalitu ar Laimo liga.",
+            "payout": "Negalios draudimo sumos dalis pagal lentelę Nr. 1, pavyzdžiui: visų galūnių paralyžius ar negrįžtama koma – 100 %, apatinių galūnių paralyžius su dubens organų funkcijos sutrikimu – 70 %, vienos kūno pusės paralyžius – 50 %.\nIšmoka didinama 15 %, kai sužalojama dominuojanti ranka.\nVieno įvykio išmokos per draudimo metus – ne daugiau kaip 100 % sumos.\nNegalia paprastai vertinama praėjus ne mažiau kaip 9 mėnesiams po įvykio; pažyma turi būti išduota per 18 mėnesių (erkių platinamų ligų atveju – per 24).",
+            "terms": "Draudimo pradžioje – nuo 0 iki 69 metų.\nGalioja visą parą visame pasaulyje.",
+            "exclusions": "Tyčinis susižalojimas ar bandymas nusižudyti.\nVeika, užtraukianti baudžiamąją ar administracinę atsakomybę.\nVidutinis ir sunkus girtumas, narkotinės ar psichotropinės medžiagos; traukulius sukeliančios ligos.\nKaro veiksmai, riaušės, branduolinė energija ir spinduliuotė; gydymo pasekmės, jei gydyta ne dėl nelaimingo atsitikimo.\nProfesionalus ir ekstremalus sportas ar laisvalaikis, jei nesutarta kitaip (netaikoma iki 18 metų)."
+        },
+        "injuries": {
+            "product": "Traumos dėl nelaimingo atsitikimo (specialiosios sąlygos Nr. 028-03, lentelė Nr. 2)",
+            "summary": "Išmoka už lūžius, išnirimus, minkštųjų audinių sužalojimus, nudegimus ir apsinuodijimus – procentais nuo traumų draudimo sumos.",
+            "event": "Nelaimingo atsitikimo metu patirtas kaulo lūžis, išnirimas ar panirimas, minkštųjų audinių sužalojimas, atsitiktinis ūmus apsinuodijimas; lentelė taip pat apima vabzdžių įgėlimus, erkinį encefalitą ir Laimo ligą, nėštumo netekimą.",
+            "payout": "Procentas nuo traumų draudimo sumos pagal lentelę Nr. 2, pavyzdžiui: šlaunikaulio galvos ar kaklo lūžis – 14 %, žastikaulio lūžis – 9 %, Achilo sausgyslės plyšimas – 5 %, nosies kaulų lūžis – 3 %, raiščių patempimas – 1 %.\nDidinama 50 % atlikus osteosintezės operaciją ar esant veido žaizdoms; 100 % – implantavus dirbtinį sąnarį arba nukentėjus nėščiajai.\nMažinama 50 % už pakartotinius lūžius, išnirimus ir dalinius plyšimus.\nVieno įvykio išmokos – ne daugiau kaip 100 % sumos.",
+            "terms": "Draudimo pradžioje – nuo 0 iki 69 metų.\nGalioja visą parą visame pasaulyje.",
+            "exclusions": "Bandymas nusižudyti, savęs žalojimas; dalyvavimas muštynėse; baudžiamoji ar administracinė veika.\nPatologiniai lūžiai, tarpslankstelinių diskų pakenkimai ir išvaržos; dantų pažeidimai valgant.\nIšnirimai, kai pirmasis išnirimas įvyko iki apsaugos pradžios; osteosintezės konstrukcijų ir protezų lūžiai.\nVidutinis ir sunkus girtumas, narkotinės medžiagos; karo veiksmai, spinduliuotė.\nProfesionalus ir ekstremalus sportas ar laisvalaikis, jei nesutarta kitaip (netaikoma iki 18 metų)."
+        },
+        "dailyAllowance": {
+            "product": "Dienpinigiai (specialiosios sąlygos Nr. 028-03)",
+            "summary": "Pasirinkto dydžio išmoka už kiekvieną laikino nedarbingumo dieną po nelaimingo atsitikimo.",
+            "event": "Laikinas nedarbingumas dėl draudžiamuoju pripažinto nelaimingo atsitikimo, patvirtintas nedarbingumo pažymėjimu; taip pat kai vienas iš tėvų slaugo nukentėjusį apdraustą vaiką.",
+            "payout": "Draudimo liudijime nurodyta suma už dieną, mokama nuo pirmos nedarbingumo dienos.\nNe daugiau kaip už 30 dienų dėl vieno įvykio ir 100 dienų per draudimo metus.\nUž traumų lentelėje nenumatytus sužalojimus – ne daugiau kaip už 14 dienų.",
+            "terms": "Draudimo pradžioje – nuo 0 iki 69 metų, kaip ir kitoms nelaimingų atsitikimų rizikoms.",
+            "exclusions": "Nedarbingumas, nepatvirtintas nustatyta tvarka išduotu nedarbingumo pažymėjimu.\nTaikomos bendrosios nelaimingų atsitikimų draudimo išimtys."
+        },
+        "hospitalAllowance": {
+            "product": "Ligonpinigiai (specialiosios sąlygos Nr. 028-03)",
+            "summary": "Pasirinkto dydžio išmoka už kiekvieną gydymo stacionare dieną.",
+            "event": "Gydymas stacionare dėl draudžiamojo įvykio pagal negalios, traumų ar papildomos pagalbos lenteles; taip pat kai vienas iš tėvų stacionare slaugo nukentėjusį apdraustą vaiką.",
+            "payout": "Draudimo liudijime nurodyta suma už dieną, mokama nuo pirmos gulėjimo ligoninėje dienos.\nNe daugiau kaip už 30 dienų dėl vieno įvykio ir 100 dienų per draudimo metus.",
+            "terms": "Draudimo pradžioje – nuo 0 iki 69 metų, kaip ir kitoms nelaimingų atsitikimų rizikoms.",
+            "exclusions": "Gydymas stacionare dėl priežasčių, nenumatytų išmokų lentelėse.\nTaikomos bendrosios nelaimingų atsitikimų draudimo išimtys."
+        },
+        "medicalExpenses": {
+            "product": "Įprastinė medicininė pagalba, papildoma pagalba ir papildomos išlaidos (specialiosios sąlygos Nr. 028-03, lentelė Nr. 3)",
+            "summary": "Pagal sąskaitas kompensuojamos po nelaimingo atsitikimo patirtos išlaidos ir mokamos išmokos už kai kurias ūmias ligas.",
+            "event": "Išlaidos, patirtos dėl draudžiamojo nelaimingo atsitikimo per 5 metus nuo jo; taip pat lentelėje Nr. 3 nurodyta ūmi liga.\nĮprastinė medicininė pagalba galioja, jei apdraustasis apdraustas mirties, negalios ir traumų rizikomis.",
+            "payout": "Įprastinė medicininė pagalba: iki 1 500 EUR kosmetinėms plastinėms operacijoms, iki 1 000 EUR reabilitacijai ir protezavimui, iki 1 000 EUR psichologinei pagalbai (pastarosios dvi – esant ne mažesnei kaip 15 % negaliai).\nPapildoma pagalba: paieška ir gelbėjimas – iki 10 000 EUR, būsto pritaikymas ir laidojimas – iki 600 EUR, psichologo pagalba – iki 300 EUR, transportavimas, ortopedinės priemonės ir tyrimai – iki 200 EUR per metus.\nŪmios ligos (apendicitas, sepsis, erkinis encefalitas, I tipo cukrinis diabetas ir kitos) – 500 EUR už įvykį, ne daugiau kaip 1 000 EUR per metus.\nPapildomos išlaidos – sutartyje sutartos sumos ribose.",
+            "terms": "Draudimo pradžioje – nuo 0 iki 69 metų.\nDaliai ūmių ligų taikomas 30 dienų laukimo laikotarpis.\nPrieš naudojantis įprastine medicinine pagalba reikia gauti draudiko patvirtinimą.",
+            "exclusions": "Sąskaitomis ar pirkimo dokumentais nepagrįstos išlaidos.\nGydytojo konsultacijos (apmokami tik tyrimai).\nIšlaidos, viršijančios realiai patirtas, kai galioja kelios sutartys.\nTaikomos bendrosios nelaimingų atsitikimų draudimo išimtys."
+        }
+    }
 }
