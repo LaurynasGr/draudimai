@@ -1,6 +1,6 @@
 {
     "metadataTitle": "Home",
-    "title": "Your app starts here",
-    "description": "Replace this page with your first screen.",
+    "title": "Insurance, explained and compared",
+    "description": "Pick an insurance type in the menu above to see what each insurer offers.",
     "signedInAs": "Signed in as <b>{user}</b>"
 }
