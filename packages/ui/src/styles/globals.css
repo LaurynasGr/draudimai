@@ -48,33 +48,33 @@
 :root {
     color-scheme: light;
     --radius: 0.625rem;
-    --background: oklch(0.977 0.005 295);
-    --foreground: oklch(0.17 0.015 295);
+    --background: oklch(0.977 0.005 250);
+    --foreground: oklch(0.17 0.015 250);
     --card: oklch(1 0 0);
-    --card-foreground: oklch(0.17 0.015 295);
+    --card-foreground: oklch(0.17 0.015 250);
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.17 0.015 295);
-    --primary: oklch(0.55 0.18 295);
-    --primary-foreground: oklch(0.985 0.005 295);
-    --secondary: oklch(0.94 0.02 295);
-    --secondary-foreground: oklch(0.3 0.06 295);
-    --muted: oklch(0.955 0.008 295);
-    --muted-foreground: oklch(0.5 0.02 295);
-    --accent: oklch(0.93 0.03 295);
-    --accent-foreground: oklch(0.28 0.06 295);
+    --popover-foreground: oklch(0.17 0.015 250);
+    --primary: oklch(0.5 0.13 250);
+    --primary-foreground: oklch(0.985 0.005 250);
+    --secondary: oklch(0.94 0.02 250);
+    --secondary-foreground: oklch(0.3 0.06 250);
+    --muted: oklch(0.955 0.008 250);
+    --muted-foreground: oklch(0.5 0.02 250);
+    --accent: oklch(0.93 0.03 250);
+    --accent-foreground: oklch(0.28 0.06 250);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.9 0.012 295);
-    --input: oklch(0.9 0.012 295);
-    --ring: oklch(0.62 0.16 295);
+    --border: oklch(0.9 0.012 250);
+    --input: oklch(0.9 0.012 250);
+    --ring: oklch(0.62 0.12 250);
     --chart-1: oklch(0.646 0.222 41.116);
     --chart-2: oklch(0.6 0.118 184.704);
     --chart-3: oklch(0.398 0.07 227.392);
     --chart-4: oklch(0.828 0.189 84.429);
     --chart-5: oklch(0.769 0.188 70.08);
     /* A shade off the page background either way: a quiet rail, not a raised panel. */
-    --sidebar: oklch(0.962 0.006 295);
+    --sidebar: oklch(0.962 0.006 250);
     --sidebar-foreground: var(--foreground);
-    --sidebar-accent: oklch(0.915 0.014 295);
+    --sidebar-accent: oklch(0.915 0.014 250);
     --sidebar-accent-foreground: var(--foreground);
     --sidebar-border: var(--border);
     --sidebar-ring: var(--ring);
@@ -85,15 +85,15 @@
 .dark {
     color-scheme: dark;
     /* Neutral surface stack anchored to the Google sign-in button's #131314,
-       with #1e1f20 (its hover shade) for raised surfaces; violet is the accent. */
+       with #1e1f20 (its hover shade) for raised surfaces; a calm blue is the accent. */
     --background: #131314;
     --foreground: oklch(0.955 0 0);
     --card: #1e1f20;
     --card-foreground: oklch(0.955 0 0);
     --popover: #1e1f20;
     --popover-foreground: oklch(0.955 0 0);
-    --primary: oklch(0.74 0.14 295);
-    --primary-foreground: oklch(0.18 0.04 295);
+    --primary: oklch(0.76 0.1 250);
+    --primary-foreground: oklch(0.18 0.04 250);
     --secondary: oklch(0.28 0 0);
     --secondary-foreground: oklch(0.955 0 0);
     --muted: oklch(0.26 0 0);
@@ -103,7 +103,7 @@
     --destructive: oklch(0.704 0.191 22.216);
     --border: oklch(1 0 0 / 12%);
     --input: oklch(1 0 0 / 16%);
-    --ring: oklch(0.68 0.14 295);
+    --ring: oklch(0.68 0.11 250);
     --chart-1: oklch(0.488 0.243 264.376);
     --chart-2: oklch(0.696 0.17 162.48);
     --chart-3: oklch(0.769 0.188 70.08);
