@@ -3,30 +3,11 @@
 import { useTranslations } from '@scaffold/i18n'
 import { cn } from '@scaffold/ui/lib/utils'
 import { useConvexAuth } from 'convex/react'
-import { HeartPulseIcon, HouseIcon, type LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { isSectionVisible, SECTIONS } from '@/lib/sections'
 
-interface NavItem {
-    /** The label's key under `nav`. */
-    key: string
-    href: string
-    icon: LucideIcon
-    /** Only shown to a signed-in visitor. Hiding the link protects nothing: the page's Convex functions do that. */
-    private?: boolean
-}
-
-/** The insurance types, all public so far. The brand in the header links home. */
-const ITEMS = [
-    { key: 'lifeInsurance', href: '/life-insurance', icon: HeartPulseIcon },
-    { key: 'homeInsurance', href: '/home-insurance', icon: HouseIcon },
-] as const satisfies NavItem[]
-
-function isVisible(item: NavItem, signedIn: boolean) {
-    return !item.private || signedIn
-}
-
-function isActive(item: (typeof ITEMS)[number], pathname: string) {
+function isActive(item: (typeof SECTIONS)[number], pathname: string) {
     return pathname === item.href || pathname.startsWith(`${item.href}/`)
 }
 
@@ -40,7 +21,7 @@ export function MainNav() {
     const { isAuthenticated } = useConvexAuth()
     return (
         <nav aria-label={t('main')} className="flex items-center gap-1">
-            {ITEMS.filter((item) => isVisible(item, isAuthenticated)).map((item) => {
+            {SECTIONS.filter((item) => isSectionVisible(item, isAuthenticated)).map((item) => {
                 const Icon = item.icon
                 const active = isActive(item, pathname)
                 return (

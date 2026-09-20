@@ -11,7 +11,7 @@ export function SignedInAs({ preloadedViewer }: SignedInAsProps) {
     const t = useTranslations('home')
     const viewer = useOptionalPreloadedQuery(preloadedViewer)
 
-    if (preloadedViewer === null) return <Skeleton className="mx-auto h-5 w-56" />
+    if (preloadedViewer === null) return <Skeleton className="h-5 w-56" />
     if (!viewer) return null
     return (
         <p className="text-sm text-muted-foreground">
