@@ -23,7 +23,7 @@ export function UserMenu({ preloadedViewer }: UserMenuProps) {
         return (
             <>
                 <Skeleton className="size-7 rounded-full" />
-                <Skeleton className="hidden h-3 w-36 sm:block" />
+                <Skeleton className="hidden h-3 w-36 lg:block" />
                 <div className="size-8" />
             </>
         )
@@ -33,7 +33,7 @@ export function UserMenu({ preloadedViewer }: UserMenuProps) {
             <Button asChild variant="ghost" size="sm">
                 <Link href="/login">
                     <LogInIcon />
-                    {t('signIn')}
+                    <span className="sr-only md:not-sr-only">{t('signIn')}</span>
                 </Link>
             </Button>
         )
@@ -50,7 +50,7 @@ export function UserMenu({ preloadedViewer }: UserMenuProps) {
                     className="size-7 rounded-full border"
                 />
             )}
-            <span className="hidden max-w-48 truncate text-xs text-muted-foreground sm:inline">
+            <span className="hidden max-w-48 truncate text-xs text-muted-foreground lg:inline">
                 {viewer.email ?? viewer.name ?? ''}
             </span>
             <Button

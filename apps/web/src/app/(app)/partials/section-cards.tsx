@@ -25,9 +25,11 @@ export function SectionCards() {
                                 <div className="mb-2 flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                                     <Icon className="size-5" />
                                 </div>
-                                <CardTitle className="flex items-center gap-1.5">
-                                    {t(`sections.${key}.title`)}
-                                    <ArrowRightIcon className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+                                <CardTitle>
+                                    <h3 className="flex items-center gap-1.5">
+                                        {t(`sections.${key}.title`)}
+                                        <ArrowRightIcon className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+                                    </h3>
                                 </CardTitle>
                                 <CardDescription>{t(`sections.${key}.description`)}</CardDescription>
                             </CardHeader>

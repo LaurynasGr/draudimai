@@ -78,8 +78,15 @@
     --sidebar-accent-foreground: var(--foreground);
     --sidebar-border: var(--border);
     --sidebar-ring: var(--ring);
-    /* Height of the app header, so section sidebars can stick below it and fill the rest of the viewport. */
-    --header-height: 3.75rem;
+    /* Height of the app header, so section sidebars can stick below it and fill the rest of the viewport. On a phone
+       the header wraps its controls to a second row. */
+    --header-height: 6.25rem;
+}
+
+@media (min-width: 40rem) {
+    :root {
+        --header-height: 3.75rem;
+    }
 }
 
 .dark {

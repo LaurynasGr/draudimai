@@ -41,7 +41,9 @@ async function CoverageCard({ coverage, locale }: CoverageCardProps) {
     return (
         <Card className={coverage.status === 'notOffered' ? 'bg-transparent shadow-none' : undefined}>
             <CardHeader>
-                <CardTitle>{t(`coverage.${coverage.id}`)}</CardTitle>
+                <CardTitle>
+                    <h4>{t(`coverage.${coverage.id}`)}</h4>
+                </CardTitle>
                 {coverage.status !== 'notOffered' && <CardDescription>{t(`${coverage.key}.product`)}</CardDescription>}
                 <CardAction>
                     <Badge variant={STATUS_BADGE[coverage.status]}>{t(`status.${coverage.status}`)}</Badge>
@@ -80,7 +82,9 @@ async function InsurerPanel({ insurer, locale }: InsurerPanelProps) {
         <div className="flex flex-col gap-4">
             <Card>
                 <CardHeader>
-                    <CardTitle>{t('overview')}</CardTitle>
+                    <CardTitle>
+                        <h3>{t('overview')}</h3>
+                    </CardTitle>
                     <CardDescription>{t(`${insurer.id}.insurer`)}</CardDescription>
                     <CardAction>
                         <a href={insurer.url} target="_blank" rel="noreferrer" className={`${EXTERNAL_LINK} text-sm`}>
@@ -99,7 +103,9 @@ async function InsurerPanel({ insurer, locale }: InsurerPanelProps) {
             ))}
             <Card>
                 <CardHeader>
-                    <CardTitle>{t('sources')}</CardTitle>
+                    <CardTitle>
+                        <h3>{t('sources')}</h3>
+                    </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <ul className="space-y-2 text-sm">
