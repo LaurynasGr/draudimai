@@ -1,20 +1,38 @@
-# Next + Convex + Vercel scaffold
+# Draudimai
 
-Starter for a full-stack app: Next.js (App Router) + Tailwind v4 + shadcn on
-the front, Convex on the back, Google sign-in via Convex Auth, typed forms
-with react-hook-form + zod, next-intl translations, Biome, Bun workspaces.
-Deploys to Vercel with `convex deploy` in the build step.
+Insurance explained and compared: what each Lithuanian insurer actually covers, summarised from the insurers' own
+policy rules, with links to the source documents. In Lithuanian and English.
 
-## Using the scaffold
+- **Life insurance** (`/life-insurance/<insurer>`): Swedbank, SEB and ERGO. Every insurer lists the same set of
+  coverages (life, accidental death, critical illness, cancer, children's critical illness, permanent incapacity,
+  disability and severe injuries from an accident, injuries, daily and hospital allowance, medical expenses), each
+  marked as offered, included in another cover, or not in the reviewed policies, with the
+  insured event, payout, eligibility and timing, main exclusions and policy references.
+- **Home insurance** (`/home-insurance`): placeholder, content to come.
 
-1. Clone, then search and replace `@scaffold/` with your package scope and
-   `next-convex-vercel-scaffold` with your project name (`package.json`, imports,
-   `components.json`, `tsconfig` paths).
-2. Edit `apps/web/src/lib/brand.ts` (name), the `tagline` in
-   `packages/i18n/src/translations/*/global.json` and `apps/web/src/app/icon.svg`.
-3. Adjust the languages in `packages/i18n/src/locales.ts` (English and Lithuanian ship as the
-   example pair; every locale directory must mirror `en`).
-4. Follow "Local setup" below.
+Every page is public. Google sign-in (`/login`) is wired up but optional, kept for user-specific features later.
+
+Built on a Next.js (App Router) + Convex scaffold: Tailwind v4 + shadcn, Convex Auth, next-intl, react-hook-form +
+zod, Biome, Bun workspaces. Deploys to Vercel with `convex deploy` in the build step.
+
+## Insurance content
+
+The summaries are copy, not data: they live in `packages/i18n/src/translations/<locale>/life-insurance.json`, with
+one object per insurer, and `apps/web/src/app/(app)/life-insurance/insurers.ts` lists each insurer's product page,
+source documents and the status of every coverage. `RETRIEVED_ON` there is the date shown on the page.
+
+- The documents the summaries were written from are kept under `apps/web/src/public/life/` (not served; the page
+  links to the insurers' hosted copies). `docs/life-insurance-audit.md` records what was checked against them,
+  the conflicts found between documents, and SHA-256 fingerprints of the editions reviewed.
+- To add an insurer: add its documents, an entry in `insurers.ts` (every coverage id, so gaps show as such) and its
+  object in both locale files. The translator is typed from the English messages, so `bun run lint` catches a
+  missing English key, and `bun test` (`translations.test.ts`) catches a locale that does not mirror `en`. When an insurer
+  brings a coverage nobody had, add the id to `COVERAGE_IDS` and a section for it to every other insurer.
+- To add an insurance type: create its route under `apps/web/src/app/(app)/`, add it to
+  `apps/web/src/lib/sections.ts` (which feeds both the header nav and the home page cards), and add `nav.<key>` and
+  `home.sections.<key>.title` / `.description` in both locales.
+- The summaries are not advice and do not replace the policy terms; re-check them when an insurer publishes new
+  rules and update `RETRIEVED_ON`.
 
 ## Repository layout
 
@@ -33,7 +51,7 @@ Next.js app's `.env.local` is the single env file.
 - `apps/web/` — the Next.js app
 
 Root scripts: `bun run dev` (web + convex), `bun run build`, `bun run lint`
-(biome + typecheck of every package), `bun test`. Tests are colocated
+(biome + typecheck of every package, after `next typegen`), `bun test`. Tests are colocated
 (`*.test.ts` next to the code). See `CLAUDE.md` for the coding conventions.
 
 ## Local setup
@@ -42,10 +60,10 @@ Root scripts: `bun run dev` (web + convex), `bun run build`, `bun run lint`
 2. `cd apps/web && bunx convex dev` once — it creates a local (anonymous)
    deployment and writes `CONVEX_DEPLOYMENT` and `NEXT_PUBLIC_CONVEX_URL` into
    `apps/web/.env.local` (see `.env.example`).
-3. Generate the deployment variables (one-time): `make env` prints `JWT_PRIVATE_KEY`, `JWKS`, `SITE_URL`
+3. Generate the deployment variables (one-time): `make env`, run from the repo root, prints `JWT_PRIVATE_KEY`, `JWKS`, `SITE_URL`
    and, if you enter them, the Google OAuth pair, and copies them to the clipboard when `pbcopy` (macOS) or `xclip` (Linux) is available. Paste them into the deployment's environment (`bunx convex env set NAME value`
    from `apps/web`, or the dashboard). Every deployment needs its own set.
-4. Set up Google OAuth ([Convex Auth docs](https://labs.convex.dev/auth/config/oauth/google)):
+4. Optional, only needed to sign in (every page works without it): set up Google OAuth ([Convex Auth docs](https://labs.convex.dev/auth/config/oauth/google)):
    - In Google Cloud Console create an OAuth client (web application) with
      authorized redirect URI `<convex site url>/api/auth/callback/google`
      (`http://127.0.0.1:3211/api/auth/callback/google` for a local deployment).
@@ -81,10 +99,10 @@ On Vercel set:
 On the **production** Convex deployment set (dashboard or `bunx convex env set --prod`):
 
 - `SITE_URL` — the Vercel app URL (OAuth redirects back to it)
-- `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET`
+- `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` — only if Google sign-in should work in production
 - `JWT_PRIVATE_KEY` / `JWKS` — a key pair of its own (`make env` prints a fresh one).
 
-Add the prod redirect URI to the Google OAuth client:
+For Google sign-in, also add the prod redirect URI to the Google OAuth client:
 `https://<prod-deployment-name>.convex.site/api/auth/callback/google`.
 
 Note: Vercel's Hobby plan is for non-commercial use only.
