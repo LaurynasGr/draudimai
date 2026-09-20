@@ -12,7 +12,7 @@ import { ExternalLinkIcon, FileTextIcon } from 'lucide-react'
 import Link from 'next/link'
 import { findInsurer, INSURERS, type InsurerCoverage, type InsurerId, RETRIEVED_ON } from './insurers'
 
-const FACTS = ['event', 'payout', 'terms', 'exclusions'] as const
+const FACTS = ['event', 'payout', 'terms', 'exclusions', 'references'] as const
 
 const STATUS_BADGE = { offered: 'default', partial: 'secondary', notOffered: 'outline' } as const
 

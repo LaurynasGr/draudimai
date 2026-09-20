@@ -2,8 +2,8 @@
 export const RETRIEVED_ON = '2026-09-19'
 
 /**
- * Every coverage any insurer offers, in display order. Each insurer lists all of them, so a tab also says what that
- * insurer does not offer; add an id here when a new insurer brings a coverage nobody had.
+ * Coverages found in the reviewed documents, in display order. Absence describes only these policies,
+ * not the insurer's entire product range.
  */
 export const COVERAGE_IDS = [
     'life',
@@ -22,7 +22,7 @@ export type CoverageId = (typeof COVERAGE_IDS)[number]
 
 /**
  * `key` is the coverage's message path under `lifeInsurance`, spelled out so that the translator can type-check it:
- * an offered or partly offered coverage has `product`, `summary` and the four facts, a missing one only `summary`.
+ * an offered or partly offered coverage has `product`, `summary` and the five facts, a missing one only `summary`.
  */
 interface Coverage {
     id: CoverageId
