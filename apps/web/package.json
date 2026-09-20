@@ -8,7 +8,8 @@
         "dev:web": "next dev -p 3100",
         "dev:backend": "convex dev",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "types": "next typegen"
     },
     "dependencies": {
         "@convex-dev/auth": "^0.0.95",

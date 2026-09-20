@@ -13,10 +13,11 @@
         "dev:backend": "cd apps/web && bun run dev:backend",
         "build": "cd apps/web && bun run build",
         "start": "cd apps/web && bun run start",
+        "types": "cd apps/web && bun run types",
         "test": "bun test",
         "lint": "concurrently 'bun biome check' 'bun run typecheck'",
         "lint:fix": "bun biome check --fix && bun run lint",
-        "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p packages/core && tsc --noEmit -p packages/i18n && tsc --noEmit -p packages/ui && tsc --noEmit -p packages/forms && tsc --noEmit -p apps/web"
+        "typecheck": "bun run types && tsc --noEmit -p tsconfig.json && tsc --noEmit -p packages/core && tsc --noEmit -p packages/i18n && tsc --noEmit -p packages/ui && tsc --noEmit -p packages/forms && tsc --noEmit -p apps/web"
     },
     "dependencies": {
         "@auth/core": "^0.41.3",
