@@ -4,10 +4,11 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { APP_NAME } from '@/lib/brand'
 import { LocaleToggle } from './locale-toggle'
+import { MainNav } from './main-nav'
 import { ThemeToggle } from './theme-toggle'
 
-/** Sticky top bar: brand and the module navigation on the left, language and theme toggles plus any page-specific actions on the right. */
-export async function AppHeader({ nav, children }: AppHeaderProps) {
+/** Sticky top bar: brand and the section navigation on the left, language and theme toggles plus any page-specific actions on the right. */
+export async function AppHeader({ children }: AppHeaderProps) {
     const t = await getTranslations('global')
     return (
         <header className="sticky top-0 z-10 h-(--header-height) border-b bg-background/80 backdrop-blur">
@@ -27,7 +28,7 @@ export async function AppHeader({ nav, children }: AppHeaderProps) {
                             <p className="hidden text-xs text-muted-foreground md:block">{t('tagline')}</p>
                         </div>
                     </Link>
-                    {nav}
+                    <MainNav />
                 </div>
                 <div className="flex shrink-0 items-center gap-2">
                     <LocaleToggle />
@@ -40,8 +41,6 @@ export async function AppHeader({ nav, children }: AppHeaderProps) {
 }
 
 interface AppHeaderProps {
-    /** Module navigation, rendered next to the brand. */
-    nav?: ReactNode
     /** Right-hand extras next to the theme toggle (user menu, page actions). */
     children?: ReactNode
 }

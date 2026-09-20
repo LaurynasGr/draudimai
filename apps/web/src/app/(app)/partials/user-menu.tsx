@@ -7,15 +7,17 @@ import { useTranslations } from '@scaffold/i18n'
 import { Button } from '@scaffold/ui/components/button'
 import { Skeleton } from '@scaffold/ui/components/skeleton'
 import type { Preloaded } from 'convex/react'
-import { LogOutIcon } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+import { LogInIcon, LogOutIcon } from 'lucide-react'
+import Link from 'next/link'
 
-/** Avatar, email and sign-out; a skeleton of the same footprint while the viewer is still preloading (null). */
+/**
+ * Avatar, email and sign-out, or a sign-in link for an anonymous visitor (every page is public); a skeleton while the
+ * viewer is still preloading (null).
+ */
 export function UserMenu({ preloadedViewer }: UserMenuProps) {
     const t = useTranslations('nav')
     const viewer = useOptionalPreloadedQuery(preloadedViewer)
     const { signOut } = useAuthActions()
-    const router = useRouter()
 
     if (preloadedViewer === null) {
         return (
@@ -26,7 +28,16 @@ export function UserMenu({ preloadedViewer }: UserMenuProps) {
             </>
         )
     }
-    if (!viewer) return null
+    if (!viewer) {
+        return (
+            <Button asChild variant="ghost" size="sm">
+                <Link href="/login">
+                    <LogInIcon />
+                    {t('signIn')}
+                </Link>
+            </Button>
+        )
+    }
     return (
         <>
             {viewer.image && (
@@ -45,10 +56,7 @@ export function UserMenu({ preloadedViewer }: UserMenuProps) {
             <Button
                 variant="ghost"
                 size="icon-sm"
-                onClick={async () => {
-                    await signOut()
-                    router.replace('/login')
-                }}
+                onClick={() => signOut()}
                 title={t('signOut')}
                 aria-label={t('signOut')}
             >

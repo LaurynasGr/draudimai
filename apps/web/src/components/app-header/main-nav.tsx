@@ -2,31 +2,45 @@
 
 import { useTranslations } from '@scaffold/i18n'
 import { cn } from '@scaffold/ui/lib/utils'
+import { useConvexAuth } from 'convex/react'
 import { HeartPulseIcon, HouseIcon, type LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-/** The insurance types; `key` is the label's key under `nav`. The brand in the header links home. */
-const ITEMS = [
-    { key: 'lifeInsurance', href: '/life-insurance', icon: HeartPulseIcon },
-    { key: 'homeInsurance', href: '/home-insurance', icon: HouseIcon },
-] as const satisfies {
+interface NavItem {
+    /** The label's key under `nav`. */
     key: string
     href: string
     icon: LucideIcon
-}[]
+    /** Only shown to a signed-in visitor. Hiding the link protects nothing: the page's Convex functions do that. */
+    private?: boolean
+}
+
+/** The insurance types, all public so far. The brand in the header links home. */
+const ITEMS = [
+    { key: 'lifeInsurance', href: '/life-insurance', icon: HeartPulseIcon },
+    { key: 'homeInsurance', href: '/home-insurance', icon: HouseIcon },
+] as const satisfies NavItem[]
+
+function isVisible(item: NavItem, signedIn: boolean) {
+    return !item.private || signedIn
+}
 
 function isActive(item: (typeof ITEMS)[number], pathname: string) {
     return pathname === item.href || pathname.startsWith(`${item.href}/`)
 }
 
-/** Module switcher in the header; the current module is highlighted from the pathname. */
+/**
+ * Section switcher in the header, on the login page too; the current section is highlighted from the pathname and
+ * private items wait for the session to be confirmed.
+ */
 export function MainNav() {
     const t = useTranslations('nav')
     const pathname = usePathname()
+    const { isAuthenticated } = useConvexAuth()
     return (
         <nav aria-label={t('main')} className="flex items-center gap-1">
-            {ITEMS.map((item) => {
+            {ITEMS.filter((item) => isVisible(item, isAuthenticated)).map((item) => {
                 const Icon = item.icon
                 const active = isActive(item, pathname)
                 return (

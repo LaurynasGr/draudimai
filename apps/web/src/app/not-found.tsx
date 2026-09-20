@@ -5,8 +5,8 @@ import { NotFoundContent } from '@/components/not-found-content/not-found-conten
 import AppLayout from './(app)/layout'
 
 /**
- * The only not-found boundary, so it renders the signed-in shell itself: Next mounts it in place of the root
- * layout's children, i.e. without `(app)/layout`. Anonymous visitors never get here (the proxy sends them to /login).
+ * The root not-found boundary, so it renders the app shell itself: Next mounts it in place of the root
+ * layout's children, i.e. without `(app)/layout`.
  */
 export default async function NotFound() {
     const t = await getTranslations('global.notFound')
