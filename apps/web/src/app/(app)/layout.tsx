@@ -3,7 +3,6 @@ import { api } from '@scaffold/core'
 import { preloadQuery } from 'convex/nextjs'
 import { Suspense } from 'react'
 import { AppHeader } from '@/components/app-header/app-header'
-import { MainNav } from './partials/main-nav'
 import { UserMenu } from './partials/user-menu'
 
 /** The only part of the shell that waits on Convex; it streams in behind the skeleton. */
@@ -13,11 +12,11 @@ async function SuspendedUserMenu() {
     return <UserMenu preloadedViewer={preloadedViewer} />
 }
 
-/** Signed-in shell. The proxy redirects anonymous visitors to /login before this renders. */
+/** The app shell, for signed-in and anonymous visitors alike: every page is public, the user menu offers sign-in. */
 export default function AppLayout({ children }: { children: React.ReactNode }) {
     return (
         <>
-            <AppHeader nav={<MainNav />}>
+            <AppHeader>
                 <Suspense fallback={<UserMenu preloadedViewer={null} />}>
                     <SuspendedUserMenu />
                 </Suspense>

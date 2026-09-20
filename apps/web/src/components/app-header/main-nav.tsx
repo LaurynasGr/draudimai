@@ -2,28 +2,26 @@
 
 import { useTranslations } from '@scaffold/i18n'
 import { cn } from '@scaffold/ui/lib/utils'
-import { HomeIcon, type LucideIcon } from 'lucide-react'
+import { useConvexAuth } from 'convex/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { isSectionVisible, SECTIONS } from '@/lib/sections'
 
-/** The modules; `key` is the label's key under `nav`. Add one per top-level section (`/projects`, …). */
-const ITEMS = [{ key: 'home', href: '/', icon: HomeIcon }] as const satisfies {
-    key: string
-    href: string
-    icon: LucideIcon
-}[]
-
-function isActive(item: (typeof ITEMS)[number], pathname: string) {
+function isActive(item: (typeof SECTIONS)[number], pathname: string) {
     return pathname === item.href || pathname.startsWith(`${item.href}/`)
 }
 
-/** Module switcher in the header; the current module is highlighted from the pathname. */
+/**
+ * Section switcher in the header, on the login page too; the current section is highlighted from the pathname and
+ * private items wait for the session to be confirmed.
+ */
 export function MainNav() {
     const t = useTranslations('nav')
     const pathname = usePathname()
+    const { isAuthenticated } = useConvexAuth()
     return (
         <nav aria-label={t('main')} className="flex items-center gap-1">
-            {ITEMS.map((item) => {
+            {SECTIONS.filter((item) => isSectionVisible(item, isAuthenticated)).map((item) => {
                 const Icon = item.icon
                 const active = isActive(item, pathname)
                 return (

@@ -1,6 +1,16 @@
 {
     "metadataTitle": "Home",
-    "title": "Your app starts here",
-    "description": "Replace this page with your first screen.",
+    "title": "Insurance, explained and compared",
+    "description": "Pick an insurance type to see what each insurer offers.",
+    "sections": {
+        "lifeInsurance": {
+            "title": "Life insurance",
+            "description": "Swedbank, SEB and ERGO: coverages, payouts, age limits and the main exclusions, with links to the rules."
+        },
+        "homeInsurance": {
+            "title": "Home insurance",
+            "description": "Information about home insurance and a comparison of offers is on its way."
+        }
+    },
     "signedInAs": "Signed in as <b>{user}</b>"
 }

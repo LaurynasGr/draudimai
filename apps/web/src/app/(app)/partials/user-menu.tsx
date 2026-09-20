@@ -7,26 +7,37 @@ import { useTranslations } from '@scaffold/i18n'
 import { Button } from '@scaffold/ui/components/button'
 import { Skeleton } from '@scaffold/ui/components/skeleton'
 import type { Preloaded } from 'convex/react'
-import { LogOutIcon } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+import { LogInIcon, LogOutIcon } from 'lucide-react'
+import Link from 'next/link'
 
-/** Avatar, email and sign-out; a skeleton of the same footprint while the viewer is still preloading (null). */
+/**
+ * Avatar, email and sign-out, or a sign-in link for an anonymous visitor (every page is public); a skeleton while the
+ * viewer is still preloading (null).
+ */
 export function UserMenu({ preloadedViewer }: UserMenuProps) {
     const t = useTranslations('nav')
     const viewer = useOptionalPreloadedQuery(preloadedViewer)
     const { signOut } = useAuthActions()
-    const router = useRouter()
 
     if (preloadedViewer === null) {
         return (
             <>
                 <Skeleton className="size-7 rounded-full" />
-                <Skeleton className="hidden h-3 w-36 sm:block" />
+                <Skeleton className="hidden h-3 w-36 lg:block" />
                 <div className="size-8" />
             </>
         )
     }
-    if (!viewer) return null
+    if (!viewer) {
+        return (
+            <Button asChild variant="ghost" size="sm">
+                <Link href="/login">
+                    <LogInIcon />
+                    <span className="sr-only md:not-sr-only">{t('signIn')}</span>
+                </Link>
+            </Button>
+        )
+    }
     return (
         <>
             {viewer.image && (
@@ -39,16 +50,13 @@ export function UserMenu({ preloadedViewer }: UserMenuProps) {
                     className="size-7 rounded-full border"
                 />
             )}
-            <span className="hidden max-w-48 truncate text-xs text-muted-foreground sm:inline">
+            <span className="hidden max-w-48 truncate text-xs text-muted-foreground lg:inline">
                 {viewer.email ?? viewer.name ?? ''}
             </span>
             <Button
                 variant="ghost"
                 size="icon-sm"
-                onClick={async () => {
-                    await signOut()
-                    router.replace('/login')
-                }}
+                onClick={() => signOut()}
                 title={t('signOut')}
                 aria-label={t('signOut')}
             >

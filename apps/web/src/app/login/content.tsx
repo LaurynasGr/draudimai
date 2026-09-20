@@ -1,13 +1,13 @@
 import { getTranslations } from '@scaffold/i18n/server'
 import { Card, CardContent } from '@scaffold/ui/components/card'
-import { DatabaseIcon, LayersIcon, type LucideIcon, ShieldCheckIcon, TextCursorInputIcon } from 'lucide-react'
+import { FileTextIcon, LayersIcon, ListChecksIcon, type LucideIcon, ScaleIcon } from 'lucide-react'
 import { DevSignInButton, GoogleSignInButton } from './partials/sign-in-buttons'
 
 /** The selling points; `key` is the line's key under `auth.features`. */
 const FEATURES = [
-    { key: 'auth', icon: ShieldCheckIcon },
-    { key: 'data', icon: DatabaseIcon },
-    { key: 'forms', icon: TextCursorInputIcon },
+    { key: 'coverages', icon: ListChecksIcon },
+    { key: 'sources', icon: FileTextIcon },
+    { key: 'compare', icon: ScaleIcon },
 ] as const satisfies { key: string; icon: LucideIcon }[]
 
 export async function SignInContent() {

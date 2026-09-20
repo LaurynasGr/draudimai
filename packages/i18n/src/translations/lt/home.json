@@ -1,6 +1,16 @@
 {
     "metadataTitle": "Pradžia",
-    "title": "Jūsų programa prasideda čia",
-    "description": "Pakeiskite šį puslapį savo pirmuoju ekranu.",
+    "title": "Draudimas: suprantamai ir palyginamai",
+    "description": "Pasirinkite draudimo rūšį ir pamatykite, ką siūlo kiekvienas draudikas.",
+    "sections": {
+        "lifeInsurance": {
+            "title": "Gyvybės draudimas",
+            "description": "Swedbank, SEB ir ERGO: apsaugos, išmokos, amžiaus ribos ir pagrindinės išimtys, su nuorodomis į taisykles."
+        },
+        "homeInsurance": {
+            "title": "Namų draudimas",
+            "description": "Informacija apie namų draudimą ir pasiūlymų palyginimas dar ruošiami."
+        }
+    },
     "signedInAs": "Prisijungta kaip <b>{user}</b>"
 }
